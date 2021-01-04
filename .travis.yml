@@ -2,5 +2,4 @@ language: shell
 os: linux
 dist: xenial
 script:
-    - echo $TRAVIS_BUILDDIR
     - echo done
