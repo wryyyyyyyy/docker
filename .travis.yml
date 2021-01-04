@@ -1,14 +1,4 @@
-language: bash
-
-services:
-  - docker
-
-before_script:
-  - docker ps -a
-
-script:
-  - bash echo test
-
-branches:
-  only:
-    - main
+language: ruby
+rvm:
+ - 2.2
+ - jruby
