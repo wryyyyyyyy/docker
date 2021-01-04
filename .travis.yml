@@ -1,5 +1,11 @@
-language: shell
-os: linux
+sudo: required
 dist: xenial
+language: shell
+
 script:
-    - echo done
+  - echo test
+
+
+branches:
+  only:
+    - master
