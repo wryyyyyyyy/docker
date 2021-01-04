@@ -1,4 +1,0 @@
-language: shell
-os: linux
-dist: xenial
-script: build.sh
