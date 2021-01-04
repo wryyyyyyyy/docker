@@ -1,4 +1,4 @@
 language: shell
 os: linux
 dist: xenial
-script: sh -e 'cd nmap && pwd && ls -la'
+script: sh -e 'pwd && ls -la'
