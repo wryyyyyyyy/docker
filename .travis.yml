@@ -1,2 +1,5 @@
-language: bash
-script: build-nmap.sh
+language: shell
+os: linux
+dist: xenial
+before_script: cd nmap
+script: build.sh
