@@ -1,5 +1,4 @@
 language: shell
 os: linux
 dist: xenial
-cd $TRAVIS_BUILD_DIR/nmap
-script: sh -c 'pwd && ls -al'
+script: sh -e 'cd nmap && pwd && ls -la'
