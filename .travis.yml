@@ -1,2 +1,4 @@
 language: bash
 script: build.sh
+
+before_script: cd nmap
