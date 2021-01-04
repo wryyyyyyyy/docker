@@ -1,4 +1,4 @@
 language: shell
 os: linux
 dist: xenial
-script: sh -e 'pwd && ls -la'
+script: build.sh
