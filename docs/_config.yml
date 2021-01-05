@@ -70,4 +70,14 @@ kramdown:
   footnote_nr       : 1
   show_warnings     : false
 
-theme: jekyll-theme-minimal
+#theme: jekyll-theme-minimal
+
+#title: [The title of your site]
+#description: [A short description of your site's purpose]
+#logo: [Location of the logo]
+#show_downloads: ["true" or "false" to indicate whether to provide a download URL]
+#google_analytics: [Your Google Analytics tracking ID]
+
+title: [The docker repo]
+description: [A short description of this docker repo]
+logo: [https://pages-themes.github.io/minimal/assets/img/logo.png]
