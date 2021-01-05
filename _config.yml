@@ -1,7 +1,7 @@
 # Where things are
 source              : .
-destination         : ./_site
-collections_dir     : .
+destination         : _site
+collections_dir     : _collection
 plugins_dir         : _plugins # takes an array of strings and loads plugins in that order
 layouts_dir         : _layouts
 data_dir            : _data
@@ -70,11 +70,4 @@ kramdown:
   footnote_nr       : 1
   show_warnings     : false
 
-theme: jekyll-theme-minimal
-
-#title: [The title of your site]
-#description: [A short description of your site's purpose]
-#logo: [Location of the logo]
-#show_downloads: ["true" or "false" to indicate whether to provide a download URL]
-#google_analytics: [Your Google Analytics tracking ID]
-
+theme: jekyll-theme-hacker
