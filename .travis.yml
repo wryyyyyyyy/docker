@@ -4,10 +4,10 @@ os: linux
 dist: precise
 
 install:
-  - bash build.sh && echo whoami
+  - bash build.sh && echo page preinstalled
 
 before_install:
-  - sudo apt-get update && sudo apt-get upgrade
+  - sudo apt-get update && sudo apt-get install cowsay
 
 deploy:
   provider: pages
@@ -18,7 +18,7 @@ deploy:
   keep_history: true
 
   script:
-  - echo done
+  - sudo cowsay say whoami
 
   on:
     branch: main
