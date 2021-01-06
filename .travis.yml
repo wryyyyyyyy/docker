@@ -18,15 +18,5 @@ deploy:
   github_token: $GITHUB_TOKEN
   keep_history: true
   script:
-  - cat <<!
-
-      Boot took $(cut -d' ' -f1 /proc/uptime) seconds
-
-!
-
   - perl -e 'print("nice job $$\n");'
-
-  on:
-    branch: gh-pages
-
 
