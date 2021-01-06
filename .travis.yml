@@ -4,14 +4,20 @@ os: linux
 dist:
 install:
 - echo skipped
-script:
-- bash build.sh
+
+before_install:
+  - echo preparing
 
 deploy:
   provider: pages
   skip_cleanup: true
   github_token: $GITHUB_TOKEN
   keep_history: true
+
+  script:
+  - bash build.sh
+  - echo done
+
   on:
     branch: main
 
