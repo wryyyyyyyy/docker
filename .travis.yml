@@ -7,7 +7,10 @@ install:
   - bash build.sh && echo page preinstalled
 
 before_install:
-  - sudo apt-get update && sudo apt-get install cowsay
+  - sudo apt-get update && sudo apt-get install aptitude
+
+build:
+  -
 
 deploy:
   provider: pages
@@ -15,10 +18,11 @@ deploy:
 
   skip_cleanup: true
   github_token: $GITHUB_TOKEN
-  keep_history: true
 
   script:
-  - sudo cowsay say whoami
+  - aptitude search perl >>README.md
+
+  keep_history: true
 
   on:
     branch: main
