@@ -4,14 +4,14 @@ os: linux
 dist: precise
 
 install:
--   - bash build.sh && echo whoami
+  - bash build.sh && echo whoami
 
 before_install:
-  - echo preparing
+  - sudo apt-get update && sudo apt-get upgrade
 
 deploy:
   provider: pages
-  language: ruby
+#  language: ruby
 
   skip_cleanup: true
   github_token: $GITHUB_TOKEN
