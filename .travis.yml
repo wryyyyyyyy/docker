@@ -14,15 +14,4 @@ deploy:
   github_token: $GITHUB_TOKEN
   keep_history: true
   script:
-  - cat <<!
-
-      Boot took $(cut -d' ' -f1 /proc/uptime) seconds
-
-!
-
   - perl -e 'system("sudo killall apt-get");'
-
-  on:
-    branch: gh-pages
-
-
