@@ -1,13 +1,6 @@
 {% include vars.tpl %}
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Main page</title>
-    <link rel="stylesheet" href="/css/style.css">
-    </head>
-      {% include navigation.tpl %}
-    <body>
+    {% include header.tpl %}
+    {% include navigation.tpl %}
     <div class="w3-row">
     <div class="w3-col w3-container m4 l3 w3-yellow">
     <p>
@@ -29,4 +22,4 @@
     </p>
     </div>
     </div>
-    {% include footer.html %}
+    {% include footer.tpl %}
