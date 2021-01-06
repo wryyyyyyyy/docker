@@ -1,15 +1,16 @@
 language: bash
 virt: vm
 os: linux
-#dist: xenial
+dist:
 install:
-- #sudo apt-get update
+- echo skipped
 script:
 - bash build.sh
 
 deploy:
   provider: pages
   skip_cleanup: true
+  github_token: $GITHUB_TOKEN
   keep_history: true
   on:
     branch: main
