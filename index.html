@@ -1,12 +1,19 @@
 ---
 title: docker repo
 description: all about
-logo: /img/logo.png
-badge: https://circleci.com/gh/wryyyyyyyy/docker.svg?style=shield&circle-token=96870f3cbda563d780f520aa67eb71f915b61f48
-travis_badge: https://api.travis-ci.com/wryyyyyyyy/cci-nmap-static.svg?branch=main
+logo: /assets/img/logo.png
 google_analytics: true
 layout: default
-content: This is the content of this page
 ---
 
+{% assign circ = 'https://circleci.com/gh/wryyyyyyyy/docker.svg?style=shield&circle-token=96870f3cbda563d780f520aa67eb71f915b61f48' %}
+{% assign trav = 'https://api.travis-ci.com/wryyyyyyyy/docker.svg' %}
 
+# {{ page.title }}
+## {{ page.description }}
+### {{ page.date | date_to_string }}
+
+#### CircleCI: {{ circ }}
+#### TravisCI: {{ trav }}
+
+{% include navigation.html %}
