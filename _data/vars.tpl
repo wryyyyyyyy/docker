@@ -1,1 +1,1 @@
-{% assign owner="wryyyyyyyy", property="github.com" %}
+{% assign owner="wryyyyyyyy", hosted="github.com" %}

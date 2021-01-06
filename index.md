@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: mainmc
 title: Main page
 description: Continious Integration with CircleCI and TravisCI
 ---
