@@ -1,22 +1,37 @@
+---
+{% include vars.tpl %}
+---
 <!doctype html>
 <html>
   <head>
     <meta charset="utf-8">
     <title>Main page</title>
     <link rel="stylesheet" href="/assets/css/style.css">
-  </head>
-  <body>
-<nav><pre><a href="/">Main page</a>    |    <a href="/doc/index">Documentation</a>    |    <a href="/contact">Contact us</a>    |    <a href="/about">About us</a></pre></nav>
-<div class="w3-row">
-  <div class="w3-col w3-container m4 l3 w3-yellow">
-    <p></p>
+    </head>
+    <body>
+    <nav><pre><a href="/">Main page</a>        <a href="/doc/index">Documentation</a>         <a href="/contact">Contact us</a>         <a href="/about">About us</a></pre></nav>
+    <div class="w3-row">
+    <div class="w3-col w3-container m4 l3 w3-yellow">
+    <p>
+      {% include pic.tpl %}
+    </p>
   </div>
   <div class="w3-col w3-container m8 l9">
-    <p></p>
-    <p></p>
+    <p>
+      {% include ipsum1.tpl %}
+    </p>
+    <p>
+      {% include ipsum2.tpl %}
+    </p>
+    <p>
+      {% include ipsum3.tpl %}
+    </p>
+    <p>
+      {% include ipsum4.tpl %}
+    </p>
   </div>
 </div>
-  <center><pre>copyright  ©  {{ cpyear }}  by <a href="https://{{ hosted }}/{{ owner }}">{{ hosted }}/{{ owner }}</a></pre></center>
+  {% include footer.html %}
 </body>
 </html>
 
