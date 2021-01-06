@@ -1,17 +1,15 @@
 language: bash
 virt: vm
 os: linux
-dist: xenial
+#dist: xenial
 install:
-- sudo apt-get update
+- #sudo apt-get update
 script:
 - bash build.sh
-- echo `uptime`
 
 deploy:
   provider: pages
   skip_cleanup: true
-  github_token: $GITHUB_TOKEN
   keep_history: true
   on:
     branch: main
