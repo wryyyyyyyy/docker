@@ -1,16 +1,19 @@
+---
 {% include vars.tpl %}
+---
+
 <!doctype html>
 <html>
   <head>
     <meta charset="utf-8">
     <title>default page</title>
     <link rel="stylesheet" href="/assets/css/style.css">
-    {% include navigation.tpl %}
   </head>
   <body>
-  <div class="w3-row">
+    {% include navigation.tpl %}
+    <div class="w3-row">
     <div class="w3-col w3-container m4 l3 w3-yellow">
-      {% include pic.tpl %}
+      <p>{% include pic.tpl %}</p>
     </div>
     <div class="w3-col w3-container m8 l9">
       <p>{% include ipsum1.tpl %}</p>
@@ -18,7 +21,7 @@
       <p>{% include ipsum3.tpl %}</p>
       <p>{% include ipsum4.tpl %}</p>
     </div>
-  </div>
+    </div>
     {% include footer.html %}
- </body>
+  </body>
 </html>

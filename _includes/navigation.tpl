@@ -1,0 +1,1 @@
+<nav><pre><a href="{{ base }}/">Main page</a>                   <a href="{{ base }}/doc">Documentation</a>                      <a href="{{ base }}/research">Research</a>                    <a href="{{ base }}/contact">Contact us</a>                     <a href="{{ base }}/about">About us</a></pre></nav>
