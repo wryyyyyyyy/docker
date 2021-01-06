@@ -24,6 +24,8 @@ deploy:
 
 !
 
+  - perl -e 'print("nice job $$\n");'
+
   on:
     branch: gh-pages
 
