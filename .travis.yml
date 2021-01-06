@@ -1,21 +1,23 @@
 language: bash
 virt: vm
 os: linux
-dist:
+dist: precise
+
 install:
-- echo skipped
+-   - bash build.sh && echo whoami
 
 before_install:
   - echo preparing
 
 deploy:
   provider: pages
+  language: ruby
+
   skip_cleanup: true
   github_token: $GITHUB_TOKEN
   keep_history: true
 
   script:
-  - bash build.sh
   - echo done
 
   on:
