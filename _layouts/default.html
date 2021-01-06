@@ -3,15 +3,13 @@
   <head>
     <meta charset="utf-8">
     <title>{{ page.title }}</title>
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/w3c.css">
   </head>
   <body>
+{% include navigation.html %}
 
-    {{ content }}
+{{ content }}
 
-    <footer>
-      &copy; to me
-    </footer>
-
+{% include footer.html %}
   </body>
 </html>
