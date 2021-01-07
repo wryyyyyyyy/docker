@@ -3,5 +3,6 @@ nmap/
 .jekyll-cache/
 _includes/
 _layouts/
+assets/
 docs/
 doc/
