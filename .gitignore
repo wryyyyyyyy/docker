@@ -2,3 +2,5 @@
 .circleci
 .git
 _?+*.
+nmap
+nmap/bin
