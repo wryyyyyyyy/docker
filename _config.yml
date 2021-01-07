@@ -1,11 +1,11 @@
 # Where things are
-source              : .
-destination         : .
-collections_dir     : _collection
-plugins_dir         : _plugins # takes an array of strings and loads plugins in that order
-layouts_dir         : _layouts
-data_dir            : _data
-includes_dir        : _includes
+source              : _docs/_site
+destination         : _docs
+collections_dir     : _docs/_collection
+plugins_dir         : _docs/_plugins # takes an array of strings and loads plugins in that order
+layouts_dir         : _docs/_layouts
+data_dir            : _docs/_data
+includes_dir        : _docs/_includes
 sass:
   sass_dir:           _sass
 collections:
