@@ -1,1 +1,1 @@
-<img src="{{ base }}/assets/img/red-hat-openshift-vector-logo-small.png"></img>
+<img src="/assets/img/red-hat-openshift-vector-logo-small.png"></img>
