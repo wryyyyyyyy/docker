@@ -1,3 +1,7 @@
 nmap
 nmap/
 .jekyll-cache/
+_includes/
+_layouts/
+docs/
+doc/
