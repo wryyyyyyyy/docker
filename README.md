@@ -3,4 +3,4 @@
 > _For testing purposes only_
 >
 
- [![Site]({{ baseurl }}/assets/img/docker.png)](https://wryyyyyyyy.github.com/docker)
+ [![Site](/_site/assets/img/docker.png)](https://wryyyyyyyy.github.com/docker)

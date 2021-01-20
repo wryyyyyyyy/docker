@@ -7,6 +7,6 @@ mkdir bin && cd bin
 wget -c https://www.busybox.net/downloads/binaries/1.30.0-i686/busybox
 ls -alh && pwd
 sudo chmod u+x ./busybox && sudo ./busybox id
-cd .. && docker build -t bbimg:v1 .
+cd .. && docker build -t bussy:v1 .
 docker image ls
 
