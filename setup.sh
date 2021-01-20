@@ -1,5 +1,6 @@
 #!/bin/sh
 echo STAGE SETUP
+<<<<<<< HEAD
 uname -a && uptime #apt list --installed
 echo STAGE TEST
 cd image-0001 && pwd
@@ -10,3 +11,8 @@ sudo chmod u+x ./busybox && sudo ./busybox id
 echo STAGE BUILD
 cd .. && docker build -t bussy:v1 .
 docker image ls bussy:v1
+=======
+apt -y update
+apt list --installed
+bash build.sh
+>>>>>>> changed setup
