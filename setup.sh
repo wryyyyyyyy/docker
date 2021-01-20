@@ -2,6 +2,7 @@
 sudo apt-get update
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 cd image-0001 && pwd
 
 =======
@@ -12,5 +13,9 @@ docker -v
 >>>>>>> setup changed
 =======
 export
+>>>>>>> setup changed
+=======
+cd image-0001 && pwd
+
 >>>>>>> setup changed
 
