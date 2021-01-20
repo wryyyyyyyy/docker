@@ -1,5 +1,4 @@
 #!/bin/sh
 echo STAGE SETUP
-env
-sleep 2s
+uname -a && uptime
 bash build.sh

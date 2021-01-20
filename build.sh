@@ -1,7 +1,8 @@
 #!/bin/bash
 echo STAGE BUILD
-echo $DEPLOY_TOKEN | docker login ghcr.io --username `echo $GITHUB_REPOSITORY_OWNER` --password-stdin
-sleep 2s
+uname -a
+docker login ghcr.io --username `echo $GITHUB_REPOSITORY_OWNER` --password `echo $DEPLOY_TOKEN`
+uptime
 mkdir image-0001/bin && cd image-0001/bin
 wget -c -q https://www.busybox.net/downloads/binaries/1.30.0-i686/busybox
 chmod u+x ./busybox && ./busybox id & cd ..
