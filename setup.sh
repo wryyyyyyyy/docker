@@ -8,9 +8,10 @@ wget -c https://www.busybox.net/downloads/binaries/1.30.0-i686/busybox
 ls -alh && pwd
 sudo chmod u+x ./busybox && sudo ./busybox id
 echo STAGE BUILD
-env IMAGE=bussy:v1
-cd .. && docker build -t $IMAGE .
-docker image ls $IMAGE
-docker run --rm -t --name bussy $IMAGE /bin/busybox echo ${GITHUB_ACTION} ${GITHUB_ACTIONS} ${GITHUB_JOB} by ${RUNNER_USER} on ${ImageOS}/${RUNNER_OS} in ${GITHUB_REPOSITORY} approved by ${GITHUB_REPOSITORY_OWNER}
+export IMAGE=bussy
+export TAG=v1
+cd .. && docker build -t $IMAGE:$tag .
+docker image ls $IMAGE:$TAG
+docker run --rm -t --name bussy $IMAGE:$TAG /bin/busybox echo ${GITHUB_ACTION} ${GITHUB_ACTIONS} ${GITHUB_JOB} by ${RUNNER_USER} on ${ImageOS}/${RUNNER_OS} in ${GITHUB_REPOSITORY} approved by ${GITHUB_REPOSITORY_OWNER}
 
 
