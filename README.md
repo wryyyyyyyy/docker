@@ -14,4 +14,3 @@ layout: default
  {% include rawlog.tpl %}
 
  {{ content }}
-

@@ -1,13 +1,13 @@
 # Where things are
 source              : .
-destination         : ../docs
+destination         : docs
 collections_dir     : .
-plugins_dir         : _plugins/
-layouts_dir         : _layouts
-data_dir            : _data
-includes_dir        : _includes
+plugins_dir         : ._plugins
+layouts_dir         : ._layouts
+data_dir            : ._data
+includes_dir        : ._includes
 sass:
-  sass_dir:           _sass
+  sass_dir:           ._sass
 collections:
   posts:
     output          : true
@@ -70,16 +70,4 @@ kramdown:
   footnote_nr       : 1
   show_warnings     : false
 
-theme: jekyll-theme-minimal
 
-plugins:
-  - jekyll-feed
-  - jekyll-sitemap
-  - jekyll-seo-tag
-  - jekyll-paginate
-  - jekyll-commonmark-ghpages
-  - github-pages
-
-feed:
-  tags               : true
-  path               : feed.xml
