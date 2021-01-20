@@ -1,49 +1,22 @@
-# This is a basic workflow to help you get started with Actions
+name: Main CI
 
-name: CI
-
-# Controls when the action will run. 
 on:
-  # Triggers the workflow on push or pull request events but only for the gh-pages branch
   push:
-    branches: [ gh-pages ]
-    - main
-    - release/*
-      
-  pull_request:
-    branches: [ gh-pages ]
+    branches:
     - main
 
-
-
-    
-
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
   build:
-    # The type of runner that the job will run on
-    runs-on: ubuntu-18.04:latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
+    runs-on: ubuntu-20.04:latest
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: echo Hello, world!
+        run: echo oneline
 
-      # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
-
-# Cron Jobs tasks #      
-on:
-  schedule:
-  - cron: "0 2 * * 1-5"
+          echo multiline #1
+          echo multiline #2
