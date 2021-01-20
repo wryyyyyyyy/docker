@@ -1,9 +1,9 @@
-name: Main CI
+name: GitHub Pages CI
 
 on:
   push:
     branches:
-    - main
+    - gh-pages
 
 jobs:
   build:
@@ -11,5 +11,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Test
-        run: bash test.sh
+      - name: Deploy
+        run: |
+          echo STAGE CI DEPLOY
