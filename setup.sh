@@ -19,5 +19,9 @@ bash build.sh
 >>>>>>> changed setup
 =======
 env
+<<<<<<< HEAD
 bash test.sh
+>>>>>>> changed setup
+=======
+bash build.sh
 >>>>>>> changed setup

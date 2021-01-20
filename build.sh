@@ -19,10 +19,11 @@ cd .. && ./post.sh
 =======
 #!/bin/bash
 echo STAGE BUILD
-docker login ghcr.io -u `echo $GITHUB_REPOSITORY_OWNER` -p `echo $DEPLOY_TOKEN`
+echo $DEPLOY_TOKEN | docker login ghcr.io --username `echo $GITHUB_REPOSITORY_OWNER` --password-stdin
 mkdir image-0001/bin && cd image-0001/bin
 wget -c -q https://www.busybox.net/downloads/binaries/1.30.0-i686/busybox
 chmod u+x ./busybox && ./busybox id & cd ..
+<<<<<<< HEAD
 docker build -t bussy:v1 .
 docker image ls bussy:v1
 docker run --rm -t --name bussy bussy:v1 /bin/busybox
@@ -32,5 +33,11 @@ bash post.sh
 >>>>>>> changed setup
 =======
 docker build . -t ghcr.io/`echo ${GITHUB_REPOSITORY}`/bussy:v1
+=======
+docker build . -t ghcr.io/`echo ${GITHUB_REPOSITORY}`/bussy:v1.0.0
+docker image ls ghcr.io/`echo ${GITHUB_REPOSITORY}`/bussy:v1.0.0
+docker run --rm -t --name bussy ghcr.io/`echo ${GITHUB_REPOSITORY}`/bussy:v1.0.0 /bin/busybox
+docker push ghcr.io/`echo ${GITHUB_REPOSITORY}`/bussy:v1.0.0
+>>>>>>> changed setup
 cd .. && ./post.sh
 >>>>>>> changed build
