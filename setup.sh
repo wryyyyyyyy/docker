@@ -1,5 +1,5 @@
 #!/bin/sh
 sudo apt-get update
-docker -v
-export
+cd image-0001 && pwd
+
 
