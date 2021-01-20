@@ -7,7 +7,11 @@ layout: default
 > _For testing purposes only_
 >
 
+<<<<<<< HEAD
 ![Develop CI](https://github.com/wryyyyyyyy/docker/workflows/Develop%20CI/badge.svg)
+=======
+ [![Source]({{ baseurl }}/assets/img/docker.png)](https://github.com/wryyyyyyyy/docker)
+>>>>>>> cleaned
 
 <<<<<<< HEAD
  [![Site]({{ baseurl }}/assets/img/docker.png)](https://wryyyyyyyy.github.com/docker)
