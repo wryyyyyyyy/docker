@@ -1,6 +1,7 @@
 #!/bin/sh
 echo STAGE SETUP
 <<<<<<< HEAD
+<<<<<<< HEAD
 uname -a && uptime #apt list --installed
 echo STAGE TEST
 cd image-0001 && pwd
@@ -15,4 +16,8 @@ docker image ls bussy:v1
 apt -y update
 apt list --installed
 bash build.sh
+>>>>>>> changed setup
+=======
+env
+bash test.sh
 >>>>>>> changed setup
