@@ -8,5 +8,5 @@ wget -c https://www.busybox.net/downloads/binaries/1.30.0-i686/busybox
 ls -alh && pwd
 sudo chmod u+x ./busybox && sudo ./busybox id
 cd .. && docker build -t bussy:v1 .
-docker image ls
+docker run --rm -t --name bussy bussy:v1 /bin/busybox
 
