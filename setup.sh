@@ -6,6 +6,7 @@ cd image-0001 && pwd
 =======
 mkdir bin && cd bin
 wget -c https://www.busybox.net/downloads/binaries/1.30.0-i686/busybox
-chmod u+x busybox && ./busibox id
+ls -alh && pwd
+#chmod u+x busybox && ./busibox id
 
 >>>>>>> cleaned
