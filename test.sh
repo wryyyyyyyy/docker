@@ -1,6 +1,7 @@
 #!/bin/bash
 echo STAGE TEST
-mkdir image-0001/bin && cd image-0001/bin
-wget -c -q https://www.busybox.net/downloads/binaries/1.30.0-i686/busybox
-chmod u+x ./busybox && ./busybox id & cd /
+echo {1..4}
+sleep 3s
+echo {5..8}
+echo TEST DONE
 bash build.sh
