@@ -1,11 +1,11 @@
 # Where things are
-source              : _docs/_site
-destination         : _docs
-collections_dir     : _docs/_collection
-plugins_dir         : _docs/_plugins # takes an array of strings and loads plugins in that order
-layouts_dir         : _docs/_layouts
-data_dir            : _docs/_data
-includes_dir        : _docs/_includes
+source              : .
+destination         : ../docs
+collections_dir     : .
+plugins_dir         : _plugins/
+layouts_dir         : _layouts
+data_dir            : _data
+includes_dir        : _includes
 sass:
   sass_dir:           _sass
 collections:
@@ -22,9 +22,9 @@ markdown_ext        : "markdown,mkdown,mkdn,mkd,md"
 strict_front_matter : false
 
 # Filtering Content
-show_drafts         : null
-limit_posts         : 0
-future              : false
+show_drafts         : true
+limit_posts         : 30
+future              : true
 unpublished         : false
 
 # Plugins
@@ -70,4 +70,16 @@ kramdown:
   footnote_nr       : 1
   show_warnings     : false
 
+theme: jekyll-theme-minimal
 
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-paginate
+  - jekyll-commonmark-ghpages
+  - github-pages
+
+feed:
+  tags               : true
+  path               : feed.xml
