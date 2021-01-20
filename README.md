@@ -14,8 +14,12 @@
 ---
 
 <<<<<<< HEAD
+<<<<<<< HEAD
  [![Source](https://e7.pngegg.com/pngimages/442/914/png-clipart-docker-logo-icons-logos-emojis-tech-companies.png)] (https://github.com/wryyyyyyyy/docker)
 >>>>>>> README changed
 =======
  [![Source]({{ site.baseurl }}/assets/img/docker.png)](https://github.com/wryyyyyyyy/docker)
+>>>>>>> README changed
+=======
+ [![Source](./docs/assets/img/docker.png)](https://github.com/wryyyyyyyy/docker)
 >>>>>>> README changed
