@@ -10,8 +10,10 @@ wget -c https://www.busybox.net/downloads/binaries/1.30.0-i686/busybox
 ls -alh && pwd
 sudo chmod u+x ./busybox && sudo ./busybox id
 echo STAGE BUILD
-cd .. && docker build -t bussy:v1 .
-docker run --rm -t --name bussy bussy:v1 /bin/busybox echo ${GITHUB_ACTION} ${GITHUB_ACTIONS} ${GITHUB_JOB} by ${RUNNER_USER} on ${ImageOS}/${RUNNER_OS} in ${GITHUB_REPOSITORY} approved by ${GITHUB_REPOSITORY_OWNER}
+env IMAGE=bussy:v1
+cd .. && docker build -t $IMAGE .
+docker image ls $IMAGE
+docker run --rm -t --name bussy $IMAGE /bin/busybox echo ${GITHUB_ACTION} ${GITHUB_ACTIONS} ${GITHUB_JOB} by ${RUNNER_USER} on ${ImageOS}/${RUNNER_OS} in ${GITHUB_REPOSITORY} approved by ${GITHUB_REPOSITORY_OWNER}
 
 
 >>>>>>> cleaned
