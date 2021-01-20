@@ -1,3 +1,7 @@
 .git
+<<<<<<< HEAD
 .github
 _site
+=======
+.github
+>>>>>>> reorganized
