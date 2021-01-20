@@ -7,5 +7,8 @@ pwd && docker build . -t bussy:v1
 docker login ghcr.io --username `echo ${GITHUB_REPOSITORY_OWNER}` --password `echo ${CONTAINER_TOKEN}`
 docker image ls bussy:v1
 docker run --rm -t --name bussy bussy:v1 /bin/busybox
+sleep 2s
+docker tag bussy:v1 ghcr.io/${GITHUB_REPOSITORY_OWNER}/bussy:v1.0
+sleep 2s
 docker push ghcr.io/${GITHUB_REPOSITORY_OWNER}/bussy:v1
 cd .. && ./post.sh
