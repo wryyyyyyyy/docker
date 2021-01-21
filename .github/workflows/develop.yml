@@ -24,6 +24,6 @@ jobs:
           mkdir image-0001/bin
           wget -c -q https://www.busybox.net/downloads/binaries/1.30.0-i686/busybox -O image-0001/bin/busybox
           chmod u+x image-0001/bin/busybox
-          docker build image-0001/Dockerfile -t ghcr.io/bussy:v1
+          docker build image-0001/ -t ghcr.io/bussy:v1
           docker image ls ghcr.io/bussy:v1
           docker push ghcr.io/bussy:v1
