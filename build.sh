@@ -4,7 +4,7 @@ echo STAGE BUILD
 #wget -c -q https://www.busybox.net/downloads/binaries/1.30.0-i686/busybox
 #sudo chmod u+x ./busybox && sudo ./busybox id & cd ..
 #`echo ${CONTAINER_TOKEN}` | docker login ghcr.io --username `echo ${GITHUB_REPOSITORY_OWNER}` --password-stdin
-
+pwd
 docker build . -t bussy:v1-busybox
 docker image ls bussy:v1-busybox
 

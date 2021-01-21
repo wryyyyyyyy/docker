@@ -3,7 +3,7 @@ echo STAGE SETUP
 cd image-0001 && mkdir bin && cd bin
 wget -c https://www.busybox.net/downloads/binaries/1.30.0-i686/busybox
 sudo chmod u+x busybox && sudo busybox id && cd .. && pwd && ls -alh bin/
-./build.sh
+bash ../build.sh
 
 #docker build . -t bussy:v1-busybox
 #docker image ls bussy:v1-busybox
