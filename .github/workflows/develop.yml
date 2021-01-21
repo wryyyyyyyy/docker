@@ -22,17 +22,17 @@ jobs:
 #          wget -c -q https://www.busybox.net/downloads/binaries/1.30.0-i686/busybox -O image-0001/bin/busybox
 #          sudo chmod u+x image-0001/bin/busybox
 
-        name: Build and push
-        id: docker_build
-        uses: docker/build-push-action@v2
+#      name: Build and push
+#      id: docker_build
+      - uses: docker/build-push-action@v2
         with:
           context: image-0001/
           file: image-0001/Dockerfile
           push: true
           tags: ${GITHUB_REPOSITORY_OWNER}/bussy:v1
 
-#        name: Image digest
-#        run: echo ${{ steps.docker_build.outputs.digest }}
+      name: Image digest
+      run: echo ${{ steps.docker_build.outputs.digest }}
 #
 
 #      - run: |
