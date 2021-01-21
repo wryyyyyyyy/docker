@@ -7,6 +7,7 @@ echo STAGE SETUP
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 cd image-0001 && pwd
 mkdir bin && cd bin
 wget -c https://www.busybox.net/downloads/binaries/1.30.0-i686/busybox
@@ -87,6 +88,10 @@ echo waiting...
 #cd .. && ./post.sh
 >>>>>>> changed build
 =======
+=======
+cd image-0001 && mkdir bin && cd bin
+wget -c https://www.busybox.net/downloads/binaries/1.30.0-i686/busybox
+>>>>>>> 2e4a98cad5c70a9d6e23b67951af5181168cbd57
 sudo chmod u+x busybox && sudo busybox id && cd ..
 ################ ################ ################ ################
 export IMG="busybox-bin"
@@ -96,4 +101,7 @@ export REGISTRY="ghcr.io"
 echo SETUP PASSED
 ################
 bash ../build.sh
+<<<<<<< HEAD
 >>>>>>> changed build
+=======
+>>>>>>> 2e4a98cad5c70a9d6e23b67951af5181168cbd57

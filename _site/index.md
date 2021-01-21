@@ -8,6 +8,7 @@ layout: default
 >
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ![Develop CI](https://github.com/wryyyyyyyy/docker/workflows/Develop%20CI/badge.svg)
 
 <<<<<<< HEAD
@@ -26,3 +27,8 @@ _ {{ $GITHUB_ACTION }} {{ $GITHUB_ACTIONS }} {{ $GITHUB_JOB }} by {{ $RUNNER_USE
 
  {{ $GITHUB_ACTION }} {{ $GITHUB_ACTIONS }} {{ $GITHUB_JOB }} by {{ $RUNNER_USER }} on {{ $ImageOS }}/{{ $RUNNER_OS }} in {{ $GITHUB_REPOSITORY }} approved by {{ $GITHUB_REPOSITORY_OWNER }}
 >>>>>>> cleaned
+=======
+ [![Source]({{ site.baseurl }}/assets/img/docker.png)](https://github.com/wryyyyyyyy/docker)
+
+ {{ $GITHUB_ACTION }} {{ $GITHUB_ACTIONS }} {{ $GITHUB_JOB }} by {{ $RUNNER_USER }} on {{ $ImageOS }}/{{ $RUNNER_OS }} in {{ $GITHUB_REPOSITORY }} approved by {{ $GITHUB_REPOSITORY_OWNER }}
+>>>>>>> 2e4a98cad5c70a9d6e23b67951af5181168cbd57

@@ -1,5 +1,8 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2e4a98cad5c70a9d6e23b67951af5181168cbd57
 #!/bin/sh
 ################
 echo STAGE BUILD
@@ -17,6 +20,7 @@ docker image push ${REGISTRY}/${GITHUB_REPOSITORY}/${IMG}:${TAG}
 echo STAGE DEPLOY FINISHED
 ################
 cd .. && ./post.sh
+<<<<<<< HEAD
 =======
 #!/bin/bash
 =======
@@ -128,3 +132,5 @@ echo STAGE DEPLOY FINISHED
 ################
 cd .. && ./post.sh
 >>>>>>> changed build
+=======
+>>>>>>> 2e4a98cad5c70a9d6e23b67951af5181168cbd57

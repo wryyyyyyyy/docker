@@ -11,6 +11,7 @@ layout: default
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ![Develop CI](https://github.com/wryyyyyyyy/docker/workflows/Develop%20CI/badge.svg)
 
  [![Site]({{ baseurl }}/assets/img/docker.png)](https://wryyyyyyyy.github.com/docker)
@@ -24,3 +25,6 @@ layout: default
 =======
  [![Site](/_site/assets/img/docker.png)](https://wryyyyyyyy.github.com/docker)
 >>>>>>> changed setup
+=======
+ [![Site](/_site/assets/img/docker.png)](https://wryyyyyyyy.github.com/docker)
+>>>>>>> 2e4a98cad5c70a9d6e23b67951af5181168cbd57
