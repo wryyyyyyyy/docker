@@ -42,7 +42,11 @@ cd .. && ./post.sh
 =======
 cd image-0001 && mkdir bin && cd bin
 wget -c https://www.busybox.net/downloads/binaries/1.30.0-i686/busybox
+<<<<<<< HEAD
 sudo chmod u+x image-0001/bin/busybox && sudo bin/busybox id & cd .. && pwd && ls -alh
+>>>>>>> changed workflow
+=======
+sudo chmod u+x busybox && sudo busybox id && cd .. && pwd && ls -alh
 >>>>>>> changed workflow
 #docker build . -t ghcr.io/${GITHUB_REPOSITORY_OWNER}/bussy:v1.0
 #docker login ghcr.io --username `echo ${GITHUB_REPOSITORY_OWNER}` --password `echo ${CONTAINER_TOKEN}`
