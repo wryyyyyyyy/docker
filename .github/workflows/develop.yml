@@ -20,11 +20,34 @@ jobs:
           username: ${GITHUB_REPOSITORY_OWNER}
           password: ${CONTAINER_TOKEN}
 
-      - run: |
-          mkdir image-0001/bin
+        name: Get busy
+        run: |
           wget -c -q https://www.busybox.net/downloads/binaries/1.30.0-i686/busybox -O image-0001/bin/busybox
-          chmod u+x image-0001/bin/busybox
-          docker build image-0001/ -t bussy:v1
-          docker image ls bussy:v1
-          docker tag bussy:v1 ghcr.io/${GITHUB_REPOSITORY_OWNER}/bussy:v1
-          docker push ghcr.io/${GITHUB_REPOSITORY_OWNER}/bussy:v1
+          sudo chmod u+x image-0001/bin/busybox
+
+        name: Build and push
+        id: docker_build
+        uses: docker/build-push-action@v2
+        with:
+          context: image-0001/
+          file: image-0001/Dockerfile
+          push: true
+          tags: ${GITHUB_REPOSITORY_OWNER}/bussy:v1
+
+        name: Image digest
+        run: echo ${{ steps.docker_build.outputs.digest }}
+
+
+#      - run: |
+#          mkdir image-0001/bin
+#          wget -c -q https://www.busybox.net/downloads/binaries/1.30.0-i686/busybox -O image-0001/bin/busybox
+#          chmod u+x image-0001/bin/busybox
+#          echo $CONTAINER_TOKEN | docker login ghcr.io -u $GITHUB_REPOSITORY_OWNER --password-stdin
+#          export REGISTRY="ghcr.io"
+#          export SOURCE_IMAGE="bussy"
+#          export VERSION="v1"
+#          docker build image-0001/ -t $SOURCE_IMAGE:$VERSION
+#          sleep 2s
+#          docker image ls $SOURCE_IMAGE:$VERSION
+#          docker tag $SOURCE_IMAGE:$VERSION $REGISTRY/${GITHUB_REPOSITORY_OWNER}/$SOURCE_IMAGE:$VERSION
+#          docker push $REGISTRY/${GITHUB_REPOSITORY_OWNER}/bussy:v1
