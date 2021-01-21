@@ -11,5 +11,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Test
-        run: bash test.sh
+      - name: Tiny
+        run: |
+          docker --version
