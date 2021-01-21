@@ -19,4 +19,5 @@ jobs:
 
       - name: Build and Deploy
         run: |
-          docker --version; id
+          docker --version
+          whoami
