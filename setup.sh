@@ -22,7 +22,7 @@ wget -c https://www.busybox.net/downloads/binaries/1.30.0-i686/busybox
 cd .. && sudo chmod u+x bin/busybox && sudo bin/busybox id
 =======
 mkdir image-0001/bin
-wget -c https://www.busybox.net/downloads/binaries/1.30.0-i686/busybox -O image-0001/bin
+wget -c https://www.busybox.net/downloads/binaries/1.30.0-i686/busybox -O image-0001/bin/busybox
 sudo chmod u+x image-0001/bin/busybox && sudo bin/busybox id
 <<<<<<< HEAD
 >>>>>>> changed build
