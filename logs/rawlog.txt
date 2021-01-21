@@ -1,0 +1,327 @@
+2021-01-21T06:15:55.8617608Z ##[section]Starting: Request a runner to run this job
+2021-01-21T06:15:56.1453181Z Can't find any online and idle self-hosted runner in current repository that matches the required labels: 'ubuntu-20.04'
+2021-01-21T06:15:56.1453291Z Can't find any online and idle self-hosted runner in current repository's account/organization that matches the required labels: 'ubuntu-20.04'
+2021-01-21T06:15:56.1453673Z Found online and idle hosted runner in current repository's account/organization that matches the required labels: 'ubuntu-20.04'
+2021-01-21T06:15:56.2769464Z ##[section]Finishing: Request a runner to run this job
+2021-01-21T06:16:03.7889176Z Current runner version: '2.275.1'
+2021-01-21T06:16:03.7921894Z ##[group]Operating System
+2021-01-21T06:16:03.7922801Z Ubuntu
+2021-01-21T06:16:03.7923332Z 20.04.1
+2021-01-21T06:16:03.7923766Z LTS
+2021-01-21T06:16:03.7924261Z ##[endgroup]
+2021-01-21T06:16:03.7925210Z ##[group]Virtual Environment
+2021-01-21T06:16:03.7926318Z Environment: ubuntu-20.04
+2021-01-21T06:16:03.7926959Z Version: 20201210.0
+2021-01-21T06:16:03.7927965Z Included Software: https://github.com/actions/virtual-environments/blob/ubuntu20/20201210.0/images/linux/Ubuntu2004-README.md
+2021-01-21T06:16:03.7929003Z ##[endgroup]
+2021-01-21T06:16:03.7932165Z Prepare workflow directory
+2021-01-21T06:16:03.8620971Z Prepare all required actions
+2021-01-21T06:16:03.8631904Z Getting action download info
+2021-01-21T06:16:04.2533523Z Download action repository 'actions/checkout@v2'
+2021-01-21T06:16:06.3760424Z Download action repository 'azure/docker-login@v1'
+2021-01-21T06:16:07.0363294Z ##[group]Run actions/checkout@v2
+2021-01-21T06:16:07.0363947Z with:
+2021-01-21T06:16:07.0364562Z   repository: wryyyyyyyy/docker
+2021-01-21T06:16:07.0365598Z   token: ***
+2021-01-21T06:16:07.0366032Z   ssh-strict: true
+2021-01-21T06:16:07.0366566Z   persist-credentials: true
+2021-01-21T06:16:07.0367075Z   clean: true
+2021-01-21T06:16:07.0367498Z   fetch-depth: 1
+2021-01-21T06:16:07.0367907Z   lfs: false
+2021-01-21T06:16:07.0368324Z   submodules: false
+2021-01-21T06:16:07.0368752Z ##[endgroup]
+2021-01-21T06:16:07.4710997Z Syncing repository: wryyyyyyyy/docker
+2021-01-21T06:16:08.1666242Z ##[group]Getting Git version info
+2021-01-21T06:16:08.1683108Z Working directory is '/home/runner/work/docker/docker'
+2021-01-21T06:16:08.1684022Z [command]/usr/bin/git version
+2021-01-21T06:16:08.1684476Z git version 2.29.2
+2021-01-21T06:16:08.1685966Z ##[endgroup]
+2021-01-21T06:16:08.1702088Z Deleting the contents of '/home/runner/work/docker/docker'
+2021-01-21T06:16:08.1731922Z ##[group]Initializing the repository
+2021-01-21T06:16:08.1732781Z [command]/usr/bin/git init /home/runner/work/docker/docker
+2021-01-21T06:16:08.1733775Z Initialized empty Git repository in /home/runner/work/docker/docker/.git/
+2021-01-21T06:16:08.1734797Z [command]/usr/bin/git remote add origin https://github.com/wryyyyyyyy/docker
+2021-01-21T06:16:08.1735603Z ##[endgroup]
+2021-01-21T06:16:08.1736251Z ##[group]Disabling automatic garbage collection
+2021-01-21T06:16:08.1737394Z [command]/usr/bin/git config --local gc.auto 0
+2021-01-21T06:16:08.1738044Z ##[endgroup]
+2021-01-21T06:16:08.1739980Z ##[group]Setting up auth
+2021-01-21T06:16:08.1741066Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2021-01-21T06:16:08.1742831Z [command]/usr/bin/git submodule foreach --recursive git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :
+2021-01-21T06:16:08.1744605Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2021-01-21T06:16:08.1746885Z [command]/usr/bin/git submodule foreach --recursive git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :
+2021-01-21T06:16:08.1749083Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2021-01-21T06:16:08.1750028Z ##[endgroup]
+2021-01-21T06:16:08.1750623Z ##[group]Fetching the repository
+2021-01-21T06:16:08.1752341Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --progress --no-recurse-submodules --depth=1 origin +1ceb3a6a21cec086214fa0490df727150149be4d:refs/remotes/origin/develop
+2021-01-21T06:16:08.1753970Z remote: Enumerating objects: 58, done.        
+2021-01-21T06:16:08.1770484Z remote: Counting objects:   1% (1/58)        
+2021-01-21T06:16:08.1771324Z remote: Counting objects:   3% (2/58)        
+2021-01-21T06:16:08.1772021Z remote: Counting objects:   5% (3/58)        
+2021-01-21T06:16:08.1772703Z remote: Counting objects:   6% (4/58)        
+2021-01-21T06:16:08.1773598Z remote: Counting objects:   8% (5/58)        
+2021-01-21T06:16:08.1774310Z remote: Counting objects:  10% (6/58)        
+2021-01-21T06:16:08.1774966Z remote: Counting objects:  12% (7/58)        
+2021-01-21T06:16:08.1775635Z remote: Counting objects:  13% (8/58)        
+2021-01-21T06:16:08.1776288Z remote: Counting objects:  15% (9/58)        
+2021-01-21T06:16:08.1777307Z remote: Counting objects:  17% (10/58)        
+2021-01-21T06:16:08.1777984Z remote: Counting objects:  18% (11/58)        
+2021-01-21T06:16:08.1778635Z remote: Counting objects:  20% (12/58)        
+2021-01-21T06:16:08.1779302Z remote: Counting objects:  22% (13/58)        
+2021-01-21T06:16:08.1779955Z remote: Counting objects:  24% (14/58)        
+2021-01-21T06:16:08.1780619Z remote: Counting objects:  25% (15/58)        
+2021-01-21T06:16:08.1781271Z remote: Counting objects:  27% (16/58)        
+2021-01-21T06:16:08.1782073Z remote: Counting objects:  29% (17/58)        
+2021-01-21T06:16:08.1782740Z remote: Counting objects:  31% (18/58)        
+2021-01-21T06:16:08.1783423Z remote: Counting objects:  32% (19/58)        
+2021-01-21T06:16:08.1784078Z remote: Counting objects:  34% (20/58)        
+2021-01-21T06:16:08.1784743Z remote: Counting objects:  36% (21/58)        
+2021-01-21T06:16:08.1785533Z remote: Counting objects:  37% (22/58)        
+2021-01-21T06:16:08.1786209Z remote: Counting objects:  39% (23/58)        
+2021-01-21T06:16:08.1786858Z remote: Counting objects:  41% (24/58)        
+2021-01-21T06:16:08.1787527Z remote: Counting objects:  43% (25/58)        
+2021-01-21T06:16:08.1788182Z remote: Counting objects:  44% (26/58)        
+2021-01-21T06:16:08.1788928Z remote: Counting objects:  46% (27/58)        
+2021-01-21T06:16:08.1789720Z remote: Counting objects:  48% (28/58)        
+2021-01-21T06:16:08.1790476Z remote: Counting objects:  50% (29/58)        
+2021-01-21T06:16:08.1791087Z remote: Counting objects:  51% (30/58)        
+2021-01-21T06:16:08.1791709Z remote: Counting objects:  53% (31/58)        
+2021-01-21T06:16:08.1792320Z remote: Counting objects:  55% (32/58)        
+2021-01-21T06:16:08.1792942Z remote: Counting objects:  56% (33/58)        
+2021-01-21T06:16:08.1793545Z remote: Counting objects:  58% (34/58)        
+2021-01-21T06:16:08.1794164Z remote: Counting objects:  60% (35/58)        
+2021-01-21T06:16:08.1794988Z remote: Counting objects:  62% (36/58)        
+2021-01-21T06:16:08.1795656Z remote: Counting objects:  63% (37/58)        
+2021-01-21T06:16:08.1796306Z remote: Counting objects:  65% (38/58)        
+2021-01-21T06:16:08.1796973Z remote: Counting objects:  67% (39/58)        
+2021-01-21T06:16:08.1797710Z remote: Counting objects:  68% (40/58)        
+2021-01-21T06:16:08.1798331Z remote: Counting objects:  70% (41/58)        
+2021-01-21T06:16:08.1798934Z remote: Counting objects:  72% (42/58)        
+2021-01-21T06:16:08.1799556Z remote: Counting objects:  74% (43/58)        
+2021-01-21T06:16:08.1800169Z remote: Counting objects:  75% (44/58)        
+2021-01-21T06:16:08.1800965Z remote: Counting objects:  77% (45/58)        
+2021-01-21T06:16:08.1801623Z remote: Counting objects:  79% (46/58)        
+2021-01-21T06:16:08.1802286Z remote: Counting objects:  81% (47/58)        
+2021-01-21T06:16:08.1802935Z remote: Counting objects:  82% (48/58)        
+2021-01-21T06:16:08.1803594Z remote: Counting objects:  84% (49/58)        
+2021-01-21T06:16:08.1804246Z remote: Counting objects:  86% (50/58)        
+2021-01-21T06:16:08.1804912Z remote: Counting objects:  87% (51/58)        
+2021-01-21T06:16:08.1805704Z remote: Counting objects:  89% (52/58)        
+2021-01-21T06:16:08.1806389Z remote: Counting objects:  91% (53/58)        
+2021-01-21T06:16:08.1807044Z remote: Counting objects:  93% (54/58)        
+2021-01-21T06:16:08.1807712Z remote: Counting objects:  94% (55/58)        
+2021-01-21T06:16:08.1808479Z remote: Counting objects:  96% (56/58)        
+2021-01-21T06:16:08.1809100Z remote: Counting objects:  98% (57/58)        
+2021-01-21T06:16:08.1809704Z remote: Counting objects: 100% (58/58)        
+2021-01-21T06:16:08.1810488Z remote: Counting objects: 100% (58/58), done.        
+2021-01-21T06:16:08.1811154Z remote: Compressing objects:   1% (1/53)        
+2021-01-21T06:16:08.1811827Z remote: Compressing objects:   3% (2/53)        
+2021-01-21T06:16:08.1812481Z remote: Compressing objects:   5% (3/53)        
+2021-01-21T06:16:08.1813148Z remote: Compressing objects:   7% (4/53)        
+2021-01-21T06:16:08.1813800Z remote: Compressing objects:   9% (5/53)        
+2021-01-21T06:16:08.1814468Z remote: Compressing objects:  11% (6/53)        
+2021-01-21T06:16:08.1815192Z remote: Compressing objects:  13% (7/53)        
+2021-01-21T06:16:08.1815860Z remote: Compressing objects:  15% (8/53)        
+2021-01-21T06:16:08.1816513Z remote: Compressing objects:  16% (9/53)        
+2021-01-21T06:16:08.1817187Z remote: Compressing objects:  18% (10/53)        
+2021-01-21T06:16:08.1817916Z remote: Compressing objects:  20% (11/53)        
+2021-01-21T06:16:08.1818605Z remote: Compressing objects:  22% (12/53)        
+2021-01-21T06:16:08.1819266Z remote: Compressing objects:  24% (13/53)        
+2021-01-21T06:16:08.1819933Z remote: Compressing objects:  26% (14/53)        
+2021-01-21T06:16:08.1820712Z remote: Compressing objects:  28% (15/53)        
+2021-01-21T06:16:08.1821382Z remote: Compressing objects:  30% (16/53)        
+2021-01-21T06:16:08.1822219Z remote: Compressing objects:  32% (17/53)        
+2021-01-21T06:16:08.1822924Z remote: Compressing objects:  33% (18/53)        
+2021-01-21T06:16:08.1823639Z remote: Compressing objects:  35% (19/53)        
+2021-01-21T06:16:08.1824342Z remote: Compressing objects:  37% (20/53)        
+2021-01-21T06:16:08.1825058Z remote: Compressing objects:  39% (21/53)        
+2021-01-21T06:16:08.1825764Z remote: Compressing objects:  41% (22/53)        
+2021-01-21T06:16:08.1826489Z remote: Compressing objects:  43% (23/53)        
+2021-01-21T06:16:08.1827202Z remote: Compressing objects:  45% (24/53)        
+2021-01-21T06:16:08.1827918Z remote: Compressing objects:  47% (25/53)        
+2021-01-21T06:16:08.1828629Z remote: Compressing objects:  49% (26/53)        
+2021-01-21T06:16:08.1829344Z remote: Compressing objects:  50% (27/53)        
+2021-01-21T06:16:08.1830045Z remote: Compressing objects:  52% (28/53)        
+2021-01-21T06:16:08.1830758Z remote: Compressing objects:  54% (29/53)        
+2021-01-21T06:16:08.1831461Z remote: Compressing objects:  56% (30/53)        
+2021-01-21T06:16:08.1832184Z remote: Compressing objects:  58% (31/53)        
+2021-01-21T06:16:08.1832887Z remote: Compressing objects:  60% (32/53)        
+2021-01-21T06:16:08.1833601Z remote: Compressing objects:  62% (33/53)        
+2021-01-21T06:16:08.1834300Z remote: Compressing objects:  64% (34/53)        
+2021-01-21T06:16:08.1835018Z remote: Compressing objects:  66% (35/53)        
+2021-01-21T06:16:08.1835719Z remote: Compressing objects:  67% (36/53)        
+2021-01-21T06:16:08.1836441Z remote: Compressing objects:  69% (37/53)        
+2021-01-21T06:16:08.1837137Z remote: Compressing objects:  71% (38/53)        
+2021-01-21T06:16:08.1837866Z remote: Compressing objects:  73% (39/53)        
+2021-01-21T06:16:08.1838657Z remote: Compressing objects:  75% (40/53)        
+2021-01-21T06:16:08.1839321Z remote: Compressing objects:  77% (41/53)        
+2021-01-21T06:16:08.1839973Z remote: Compressing objects:  79% (42/53)        
+2021-01-21T06:16:08.1840635Z remote: Compressing objects:  81% (43/53)        
+2021-01-21T06:16:08.1841288Z remote: Compressing objects:  83% (44/53)        
+2021-01-21T06:16:08.1841952Z remote: Compressing objects:  84% (45/53)        
+2021-01-21T06:16:08.1842604Z remote: Compressing objects:  86% (46/53)        
+2021-01-21T06:16:08.1843273Z remote: Compressing objects:  88% (47/53)        
+2021-01-21T06:16:08.1843929Z remote: Compressing objects:  90% (48/53)        
+2021-01-21T06:16:08.1844593Z remote: Compressing objects:  92% (49/53)        
+2021-01-21T06:16:08.1845254Z remote: Compressing objects:  94% (50/53)        
+2021-01-21T06:16:08.1846046Z remote: Compressing objects:  96% (51/53)        
+2021-01-21T06:16:08.1846991Z remote: Compressing objects:  98% (52/53)        
+2021-01-21T06:16:08.1847708Z remote: Compressing objects: 100% (53/53)        
+2021-01-21T06:16:08.1848439Z remote: Compressing objects: 100% (53/53), done.        
+2021-01-21T06:16:08.1849646Z remote: Total 58 (delta 2), reused 47 (delta 1), pack-reused 0        
+2021-01-21T06:16:08.1850545Z From https://github.com/wryyyyyyyy/docker
+2021-01-21T06:16:08.1851835Z  * [new ref]         1ceb3a6a21cec086214fa0490df727150149be4d -> origin/develop
+2021-01-21T06:16:08.1852759Z ##[endgroup]
+2021-01-21T06:16:08.1853426Z ##[group]Determining the checkout info
+2021-01-21T06:16:08.1854065Z ##[endgroup]
+2021-01-21T06:16:08.1854658Z ##[group]Checking out the ref
+2021-01-21T06:16:08.1855772Z [command]/usr/bin/git checkout --progress --force -B develop refs/remotes/origin/develop
+2021-01-21T06:16:08.1856875Z Switched to a new branch 'develop'
+2021-01-21T06:16:08.1858008Z Branch 'develop' set up to track remote branch 'develop' from 'origin'.
+2021-01-21T06:16:08.1858796Z ##[endgroup]
+2021-01-21T06:16:08.1859584Z [command]/usr/bin/git log -1 --format='%H'
+2021-01-21T06:16:08.1860614Z '1ceb3a6a21cec086214fa0490df727150149be4d'
+2021-01-21T06:16:08.1983177Z ##[group]Run azure/docker-login@v1
+2021-01-21T06:16:08.1983649Z with:
+2021-01-21T06:16:08.1984042Z   login-server: ghcr.io
+2021-01-21T06:16:08.1984563Z   username: ${GITHUB_REPOSITORY_OWNER}
+2021-01-21T06:16:08.1985108Z   password: ${CONTAINER_TOKEN}
+2021-01-21T06:16:08.1985541Z ##[endgroup]
+2021-01-21T06:16:08.2479148Z DOCKER_CONFIG environment variable is set
+2021-01-21T06:16:08.2533358Z ##[group]Run ./setup.sh
+2021-01-21T06:16:08.2533881Z [36;1m./setup.sh[0m
+2021-01-21T06:16:08.2579060Z shell: /usr/bin/bash -e {0}
+2021-01-21T06:16:08.2579476Z env:
+2021-01-21T06:16:08.2579981Z   DOCKER_CONFIG: /home/runner/work/_temp/docker_login_1611209768236
+2021-01-21T06:16:08.2580504Z ##[endgroup]
+2021-01-21T06:16:08.2661701Z STAGE SETUP
+2021-01-21T06:16:08.2720777Z --2021-01-21 06:16:08--  https://www.busybox.net/downloads/binaries/1.30.0-i686/busybox
+2021-01-21T06:16:08.3230989Z Resolving www.busybox.net (www.busybox.net)... 140.211.167.122
+2021-01-21T06:16:08.3825879Z Connecting to www.busybox.net (www.busybox.net)|140.211.167.122|:443... connected.
+2021-01-21T06:16:08.5724964Z HTTP request sent, awaiting response... 200 OK
+2021-01-21T06:16:08.5725874Z Length: 975004 (952K)
+2021-01-21T06:16:08.5730076Z Saving to: ‘busybox’
+2021-01-21T06:16:08.6310189Z 
+2021-01-21T06:16:08.6899782Z      0K .......... .......... .......... .......... ..........  5%  425K 2s
+2021-01-21T06:16:08.7487851Z     50K .......... .......... .......... .......... .......... 10%  850K 2s
+2021-01-21T06:16:08.7490762Z    100K .......... .......... .......... .......... .......... 15%  125M 1s
+2021-01-21T06:16:08.8083661Z    150K .......... .......... .......... .......... .......... 21%  855K 1s
+2021-01-21T06:16:08.8088106Z    200K .......... .......... .......... .......... .......... 26%  128M 1s
+2021-01-21T06:16:08.8088923Z    250K .......... .......... .......... .......... .......... 31%  122M 1s
+2021-01-21T06:16:08.8089770Z    300K .......... .......... .......... .......... .......... 36%  148M 0s
+2021-01-21T06:16:08.8662033Z    350K .......... .......... .......... .......... .......... 42%  872K 0s
+2021-01-21T06:16:08.8665324Z    400K .......... .......... .......... .......... .......... 47%  129M 0s
+2021-01-21T06:16:08.8700143Z    450K .......... .......... .......... .......... .......... 52%  153M 0s
+2021-01-21T06:16:08.8701526Z    500K .......... .......... .......... .......... .......... 57%  110M 0s
+2021-01-21T06:16:08.8702496Z    550K .......... .......... .......... .......... .......... 63% 44.2M 0s
+2021-01-21T06:16:08.8703457Z    600K .......... .......... .......... .......... .......... 68% 73.1M 0s
+2021-01-21T06:16:08.8704182Z    650K .......... .......... .......... .......... .......... 73% 97.5M 0s
+2021-01-21T06:16:08.8704920Z    700K .......... .......... .......... .......... .......... 78%  102M 0s
+2021-01-21T06:16:08.9254780Z    750K .......... .......... .......... .......... .......... 84%  916K 0s
+2021-01-21T06:16:08.9289159Z    800K .......... .......... .......... .......... .......... 89%  108M 0s
+2021-01-21T06:16:08.9290112Z    850K .......... .......... .......... .......... .......... 94% 39.7M 0s
+2021-01-21T06:16:08.9290983Z    900K .......... .......... .......... .......... .......... 99%  143M 0s
+2021-01-21T06:16:08.9291676Z    950K ..                                                    100% 51.8M=0.4s
+2021-01-21T06:16:08.9292150Z 
+2021-01-21T06:16:08.9294051Z 2021-01-21 06:16:08 (2.62 MB/s) - ‘busybox’ saved [975004/975004]
+2021-01-21T06:16:08.9294514Z 
+2021-01-21T06:16:09.2202254Z uid=0(root) gid=0(root) groups=0(root)
+2021-01-21T06:16:09.2214735Z SETUP PASSED
+2021-01-21T06:16:09.2239068Z STAGE BUILD
+2021-01-21T06:16:10.1081563Z Sending build context to Docker daemon  978.4kB
+2021-01-21T06:16:10.1083101Z 
+2021-01-21T06:16:10.1121305Z Step 1/3 : FROM scratch
+2021-01-21T06:16:10.1140568Z  ---> 
+2021-01-21T06:16:10.1141713Z Step 2/3 : COPY . /
+2021-01-21T06:16:10.2377084Z  ---> ade27554d776
+2021-01-21T06:16:10.2378258Z Step 3/3 : ENTRYPOINT ["/bin/busybox"]
+2021-01-21T06:16:10.4275302Z  ---> Running in f5e9fd05a3bb
+2021-01-21T06:16:11.0115671Z Removing intermediate container f5e9fd05a3bb
+2021-01-21T06:16:11.0124622Z  ---> e12df242f533
+2021-01-21T06:16:11.0130485Z Successfully built e12df242f533
+2021-01-21T06:16:11.0161067Z Successfully tagged busybox-bin:latest
+2021-01-21T06:16:11.0630306Z REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+2021-01-21T06:16:11.0633294Z busybox-bin         latest              e12df242f533        1 second ago        975kB
+2021-01-21T06:16:11.0665024Z BUILD PASSED
+2021-01-21T06:16:11.0688630Z STAGE TEST
+2021-01-21T06:16:11.8765165Z BusyBox v1.30.0 (2018-12-30 22:25:27 CET) multi-call binary.
+2021-01-21T06:16:11.8781374Z BusyBox is copyrighted by many authors between 1998-2015.
+2021-01-21T06:16:11.8782488Z Licensed under GPLv2. See source distribution for detailed
+2021-01-21T06:16:11.8783445Z copyright notices.
+2021-01-21T06:16:11.8783870Z 
+2021-01-21T06:16:11.8784480Z Usage: busybox [function [arguments]...]
+2021-01-21T06:16:11.8785454Z    or: busybox --list[-full]
+2021-01-21T06:16:11.8786301Z    or: busybox --show SCRIPT
+2021-01-21T06:16:11.8787187Z    or: busybox --install [-s] [DIR]
+2021-01-21T06:16:11.8787843Z    or: function [arguments]...
+2021-01-21T06:16:11.8788169Z 
+2021-01-21T06:16:11.8788868Z 	BusyBox is a multi-call binary that combines many common Unix
+2021-01-21T06:16:11.8789708Z 	utilities into a single executable.  Most people will create a
+2021-01-21T06:16:11.8790476Z 	link to busybox for each function they wish to use and BusyBox
+2021-01-21T06:16:11.8791137Z 	will act like whatever it was invoked as.
+2021-01-21T06:16:11.8791492Z 
+2021-01-21T06:16:11.8791926Z Currently defined functions:
+2021-01-21T06:16:11.8792803Z 	[, [[, acpid, add-shell, addgroup, adduser, adjtimex, ar, arch, arp,
+2021-01-21T06:16:11.8793643Z 	arping, ash, awk, base64, basename, bc, blkdiscard, blkid, blockdev,
+2021-01-21T06:16:11.8794529Z 	bootchartd, brctl, bunzip2, bzcat, bzip2, cal, cat, chat, chattr,
+2021-01-21T06:16:11.8795341Z 	chgrp, chmod, chown, chpasswd, chpst, chroot, chrt, chvt, cksum, clear,
+2021-01-21T06:16:11.8796160Z 	cmp, comm, conspy, cp, cpio, crond, crontab, cryptpw, cttyhack, cut,
+2021-01-21T06:16:11.8796970Z 	date, dc, dd, deallocvt, delgroup, deluser, depmod, devmem, df,
+2021-01-21T06:16:11.8797846Z 	dhcprelay, diff, dirname, dmesg, dnsd, dnsdomainname, dos2unix, dpkg,
+2021-01-21T06:16:11.8798941Z 	dpkg-deb, du, dumpkmap, dumpleases, echo, ed, egrep, eject, env,
+2021-01-21T06:16:11.8799847Z 	envdir, envuidgid, expand, expr, factor, fakeidentd, false, fatattr,
+2021-01-21T06:16:11.8800718Z 	fbset, fbsplash, fdflush, fdformat, fdisk, fgconsole, fgrep, find,
+2021-01-21T06:16:11.8801571Z 	findfs, flash_eraseall, flash_lock, flash_unlock, flashcp, flock, fold,
+2021-01-21T06:16:11.8802421Z 	free, freeramdisk, fsck, fsck.minix, fsfreeze, fstrim, fsync, ftpd,
+2021-01-21T06:16:11.8803572Z 	ftpget, ftpput, fuser, getopt, getty, grep, groups, gunzip, gzip, halt,
+2021-01-21T06:16:11.8804403Z 	hd, hdparm, head, hexdump, hexedit, hostid, hostname, httpd, hush,
+2021-01-21T06:16:11.8805254Z 	hwclock, i2cdetect, i2cdump, i2cget, i2cset, id, ifconfig, ifenslave,
+2021-01-21T06:16:11.8855710Z 	ifplugd, inetd, init, inotifyd, insmod, install, ionice, iostat, ip,
+2021-01-21T06:16:11.8856494Z 	ipaddr, ipcalc, ipcrm, ipcs, iplink, ipneigh, iproute, iprule,
+2021-01-21T06:16:11.8857317Z 	iptunnel, kbd_mode, kill, killall, killall5, klogd, last, less, link,
+2021-01-21T06:16:11.8858066Z 	linux32, linux64, linuxrc, ln, loadfont, loadkmap, logger, login,
+2021-01-21T06:16:11.8858997Z 	logname, losetup, lpd, lpq, lpr, ls, lsattr, lsmod, lsof, lspci,
+2021-01-21T06:16:11.8859786Z 	lsscsi, lsusb, lzcat, lzma, lzop, lzopcat, makedevs, makemime, man,
+2021-01-21T06:16:11.8860593Z 	md5sum, mdev, mesg, microcom, mkdir, mkdosfs, mke2fs, mkfifo,
+2021-01-21T06:16:11.8861410Z 	mkfs.ext2, mkfs.minix, mkfs.vfat, mknod, mkpasswd, mkswap, mktemp,
+2021-01-21T06:16:11.8862313Z 	modinfo, modprobe, more, mount, mountpoint, mpstat, mt, mv, nameif,
+2021-01-21T06:16:11.8863802Z 	nbd-client, nc, netstat, nice, nl, nmeter, nohup, nologin, nproc, ntpd,
+2021-01-21T06:16:11.8864752Z 	nuke, od, openvt, partprobe, passwd, paste, patch, pgrep, pidof, ping,
+2021-01-21T06:16:11.8865576Z 	ping6, pipe_progress, pivot_root, pkill, pmap, popmaildir, poweroff,
+2021-01-21T06:16:11.8866437Z 	powertop, printenv, printf, ps, pscan, pstree, pwd, pwdx, raidautorun,
+2021-01-21T06:16:11.8867524Z 	rdate, rdev, readlink, readprofile, realpath, reboot, reformime,
+2021-01-21T06:16:11.8868559Z 	remove-shell, renice, reset, resize, resume, rev, rm, rmdir, rmmod,
+2021-01-21T06:16:11.8869546Z 	route, rpm, rpm2cpio, rtcwake, run-init, run-parts, runlevel, runsv,
+2021-01-21T06:16:11.8870348Z 	runsvdir, rx, script, scriptreplay, sed, sendmail, seq, setarch,
+2021-01-21T06:16:11.8871182Z 	setconsole, setfattr, setfont, setkeycodes, setlogcons, setpriv,
+2021-01-21T06:16:11.8872074Z 	setserial, setsid, setuidgid, sh, sha1sum, sha256sum, sha3sum,
+2021-01-21T06:16:11.8872853Z 	sha512sum, showkey, shred, shuf, slattach, sleep, smemcap, softlimit,
+2021-01-21T06:16:11.8873854Z 	sort, split, ssl_client, start-stop-daemon, stat, strings, stty, su,
+2021-01-21T06:16:11.8874638Z 	sulogin, sum, sv, svc, svlogd, svok, swapoff, swapon, switch_root,
+2021-01-21T06:16:11.8875338Z 	sync, sysctl, syslogd, tac, tail, tar, taskset, tc, tcpsvd, tee,
+2021-01-21T06:16:11.8876048Z 	telnet, telnetd, test, tftp, tftpd, time, timeout, top, touch, tr,
+2021-01-21T06:16:11.8876861Z 	traceroute, traceroute6, true, truncate, tty, ttysize, tunctl, tune2fs,
+2021-01-21T06:16:11.8877692Z 	ubiattach, ubidetach, ubimkvol, ubirename, ubirmvol, ubirsvol,
+2021-01-21T06:16:11.8878490Z 	ubiupdatevol, udhcpc, udhcpd, udpsvd, uevent, umount, uname,
+2021-01-21T06:16:11.8879274Z 	uncompress, unexpand, uniq, unix2dos, unlink, unlzma, unlzop, unxz,
+2021-01-21T06:16:11.8880082Z 	unzip, uptime, users, usleep, uudecode, uuencode, vconfig, vi, vlock,
+2021-01-21T06:16:11.8880849Z 	volname, w, wall, watch, watchdog, wc, wget, which, who, whoami, whois,
+2021-01-21T06:16:11.8881472Z 	xargs, xxd, xz, xzcat, yes, zcat, zcip
+2021-01-21T06:16:11.8881904Z TEST PASSED
+2021-01-21T06:16:11.8882305Z STAGE DEPLOY
+2021-01-21T06:16:11.8883063Z The push refers to repository [ghcr.io/wryyyyyyyy/busybox-bin]
+2021-01-21T06:16:11.9272257Z d8fefacb5118: Preparing
+2021-01-21T06:16:12.0535637Z denied: denied
+2021-01-21T06:16:12.0566519Z DEPLOY PASSED
+2021-01-21T06:16:12.0581845Z STAGE POST
+2021-01-21T06:16:12.0627009Z run true build by runner on ubuntu20/Linux in wryyyyyyyy/docker approved by wryyyyyyyy
+2021-01-21T06:16:12.0716931Z Post job cleanup.
+2021-01-21T06:16:12.1734226Z [command]/usr/bin/git version
+2021-01-21T06:16:12.1796393Z git version 2.29.2
+2021-01-21T06:16:12.1823121Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2021-01-21T06:16:12.1860363Z [command]/usr/bin/git submodule foreach --recursive git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :
+2021-01-21T06:16:12.2119978Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2021-01-21T06:16:12.2148456Z http.https://github.com/.extraheader
+2021-01-21T06:16:12.2158297Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2021-01-21T06:16:12.2193328Z [command]/usr/bin/git submodule foreach --recursive git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :
+2021-01-21T06:16:12.2484951Z Cleaning up orphan processes

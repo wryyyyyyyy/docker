@@ -124,7 +124,7 @@ echo TEST PASSED
 echo STAGE DEPLOY
 docker tag ${IMG}:${TAG} ${REGISTRY}/${GITHUB_REPOSITORY_OWNER}/${IMG}:${TAG}
 docker push ${REGISTRY}/${GITHUB_REPOSITORY_OWNER}/${IMG}:${TAG}
-echo DEPLOY PASSED
+echo STAGE DEPLOY FINISHED
 ################
 cd .. && ./post.sh
 >>>>>>> changed build
