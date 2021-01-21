@@ -5,6 +5,7 @@ echo STAGE SETUP
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 cd image-0001 && pwd
 mkdir bin && cd bin
 wget -c https://www.busybox.net/downloads/binaries/1.30.0-i686/busybox
@@ -38,6 +39,11 @@ docker push ghcr.io/${GITHUB_REPOSITORY_OWNER}/bussy:v1.0
 cd .. && ./post.sh
 >>>>>>> changed build
 =======
+=======
+cd image-0001 && mkdir bin && cd bin
+wget -c https://www.busybox.net/downloads/binaries/1.30.0-i686/busybox
+sudo chmod u+x image-0001/bin/busybox && sudo bin/busybox id & cd .. && pwd && ls -alh
+>>>>>>> changed workflow
 #docker build . -t ghcr.io/${GITHUB_REPOSITORY_OWNER}/bussy:v1.0
 #docker login ghcr.io --username `echo ${GITHUB_REPOSITORY_OWNER}` --password `echo ${CONTAINER_TOKEN}`
 #docker run --rm -t ghcr.io/${GITHUB_REPOSITORY_OWNER}/bussy:v1.0 /bin/busybox
