@@ -15,4 +15,3 @@ layout: default
 
  {{ content }}
 
- {% include footer.tpl %}
