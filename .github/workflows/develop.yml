@@ -16,8 +16,6 @@ jobs:
           login-server: ghcr.io
           username: ${GITHUB_REPOSITORY_OWNER}
           password: ${CONTAINER_TOKEN}
-
-
-    - run: |
+      run: |
         pwd
 #        bash setup.sh
