@@ -1,3 +1,3 @@
 FROM scratch
 COPY . /
-ENTRYPOINT ["/bin/wtf"]
+ENTRYPOINT ["/bin/busybox"]
