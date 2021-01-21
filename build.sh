@@ -20,6 +20,7 @@ cd .. && ./post.sh
 #!/bin/bash
 echo STAGE BUILD
 <<<<<<< HEAD
+<<<<<<< HEAD
 mkdir image-0001/bin && cd image-0001/bin
 wget -c -q https://www.busybox.net/downloads/binaries/1.30.0-i686/busybox
 <<<<<<< HEAD
@@ -84,12 +85,23 @@ docker build . -t ghcr.io/wryyyyyyyy/scratch:1.0
 pwd
 docker build . -t bussy:v1-busybox
 docker image ls bussy:v1-busybox
+=======
+export IMG="bussy"
+export TAG="v1-busybox"
+docker build . -t $IMG:$TAG
+docker image ls $IMG:$TAG
+>>>>>>> changed build
 
+echo STAGE TEST
+docker run --rm -t $IMG:$TAG: /bin/busybox
 
 
 #docker build . -t ghcr.io/wryyyyyyyy/scratch:1.0
+<<<<<<< HEAD
 >>>>>>> changed build
 #docker run --rm -t --name bussy bussy:${{ github.sha }} /bin/busybox
+=======
+>>>>>>> changed build
 #docker image ls ghcr.io/wryyyyyyyy/scratch:1.0
 #docker push ghcr.io/wryyyyyyyy/scratch:1.0
 #cd .. && ./post.sh

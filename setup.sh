@@ -69,6 +69,10 @@ docker image ls bussy:v1-busybox
 ./build.sh
 =======
 bash ../build.sh
+<<<<<<< HEAD
+>>>>>>> changed build
+=======
+echo waiting...
 >>>>>>> changed build
 
 #docker build . -t bussy:v1-busybox
