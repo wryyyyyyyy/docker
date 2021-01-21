@@ -1,13 +1,13 @@
 # Where things are
-source              : _site
+source              : .
 destination         : docs
-collections_dir     : _site
-plugins_dir         : _site/_plugins/
-layouts_dir         : _site/_layouts
-data_dir            : _site/_data
-includes_dir        : _site/_includes
+collections_dir     : .
+plugins_dir         : ._plugins
+layouts_dir         : ._layouts
+data_dir            : ._data
+includes_dir        : ._includes
 sass:
-  sass_dir:           _site/_sass
+  sass_dir:           ._sass
 collections:
   posts:
     output          : true
@@ -42,7 +42,7 @@ incremental         : false
 detach              : false
 port                : 4000
 host                : 127.0.0.1
-baseurl             : "" # does not include hostname
+baseurl             : "/docker" # does not include hostname
 show_dir_listing    : false
 
 # Outputting
