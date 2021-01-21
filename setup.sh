@@ -1,15 +1,13 @@
 #!/bin/sh
+################
 echo STAGE SETUP
 cd image-0001 && mkdir bin && cd bin
 wget -c https://www.busybox.net/downloads/binaries/1.30.0-i686/busybox
-sudo chmod u+x busybox && sudo busybox id && cd .. && pwd && ls -alh bin/
+sudo chmod u+x busybox && sudo busybox id && cd ..
+################ ################ ################ ################
+export IMG="bussy"
+export TAG="v1-busybox"
+export REGISTRY="ghcr.io"
+echo SETUP PASSED
+################
 bash ../build.sh
-echo waiting...
-
-#docker build . -t bussy:v1-busybox
-#docker image ls bussy:v1-busybox
-#docker login ghcr.io --username `echo ${GITHUB_REPOSITORY_OWNER}` --password `echo ${CONTAINER_TOKEN}`
-#docker run --rm -t ghcr.io/${GITHUB_REPOSITORY_OWNER}/bussy:v1.0 /bin/busybox
-#docker image ls ghcr.io/${GITHUB_REPOSITORY_OWNER}/bussy:v1.0
-#docker push ghcr.io/${GITHUB_REPOSITORY_OWNER}/bussy:v1.0
-#cd .. && ./post.sh

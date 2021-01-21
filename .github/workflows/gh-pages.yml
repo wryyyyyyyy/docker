@@ -13,4 +13,4 @@ jobs:
 
       - name: Deploy
         run: |
-          echo STAGE CI DEPLOY
+          echo STAGE PAGES

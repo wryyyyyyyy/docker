@@ -1,4 +1,6 @@
 #!/bin/bash
-echo STAGE TEST {0..5}
-
-
+################
+echo STAGE TEST {1..4}
+sleep 2s
+echo TEST PASSED {5..8}
+################
