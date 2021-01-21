@@ -19,7 +19,7 @@ jobs:
 
       - uses: docker/build-push-action@v2
         with:
-          context: image-0001
+          context: image-0001/
           file: image-0001/Dockerfile
           push: true
           tags: |
