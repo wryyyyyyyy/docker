@@ -17,5 +17,5 @@ jobs:
           username: ${GITHUB_REPOSITORY_OWNER}
           password: ${CONTAINER_TOKEN}
 
-      - name: Raw Build
-        run: bash setup.sh
+      - name: Build and Deploy
+        run: ./setup.sh
