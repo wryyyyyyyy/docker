@@ -17,11 +17,13 @@ jobs:
       - uses: azure/docker-login@v1
         with:
           login-server: ghcr.io
-          username: ${{ secrets.REGISTRY_USERNAME }}
-          password: ${{ secrets.REGISTRY_PASSWORD }}
+          username: ${GITHUB_REPOSITORY_OWNER}
+          password: ${CONTAINER_TOKEN}
 
       - run: |
-          echo Building...
-          bash build.sh
-#          docker build . -t contoso.azurecr.io/k8sdemo:${{ github.sha }}
-#          docker push contoso.azurecr.io/k8sdemo:${{ github.sha }}
+          mkdir image-0001/bin
+          wget -c -q https://www.busybox.net/downloads/binaries/1.30.0-i686/busybox -O image-0001/bin/busybox
+          chmod u+x image-0001/bin/busybox
+          docker build image-0001/Dockerfile -t ghcr.io/bussy:v1
+          docker image ls ghcr.io/bussy:v1
+          docker push ghcr.io/bussy:v1
