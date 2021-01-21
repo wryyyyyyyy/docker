@@ -4,12 +4,13 @@ on:
   push:
     branches:
     - gh-pages
+    - develop
 
 jobs:
   build:
     runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v2
+#      - uses: actions/checkout@v2
 
       - name: Deploy
         run: |

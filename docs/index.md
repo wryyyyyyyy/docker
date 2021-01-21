@@ -9,7 +9,7 @@ layout: default
 
 ![Develop CI](https://github.com/wryyyyyyyy/docker/workflows/Develop%20CI/badge.svg)
 
- [![Site]({{ baseurl }}/assets/img/docker.png)](https://wryyyyyyyy.github.com/docker)
+ [![Site](/docker/assets/img/docker.png)](https://wryyyyyyyy.github.com/docker)
 
  {% include rawlog.tpl %}
 
