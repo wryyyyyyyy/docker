@@ -18,6 +18,7 @@ jobs:
           password: ${CONTAINER_TOKEN}
 
   test:
+    runs-on: ubuntu-20.04
     steps:
       - run: |
           bash setup.sh
