@@ -15,7 +15,13 @@ jobs:
 #        run: bash setup.sh
 
       - uses: azure/docker-login@v1
-          with:
-            login-server: ghcr.io
-            username: ${{ secrets.REGISTRY_USERNAME }}
-            password: ${{ secrets.REGISTRY_PASSWORD }}
+        with:
+          login-server: ghcr.io
+          username: ${{ secrets.REGISTRY_USERNAME }}
+          password: ${{ secrets.REGISTRY_PASSWORD }}
+
+      - run: |
+          echo Building...
+          bash build.sh
+#          docker build . -t contoso.azurecr.io/k8sdemo:${{ github.sha }}
+#          docker push contoso.azurecr.io/k8sdemo:${{ github.sha }}
