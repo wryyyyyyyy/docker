@@ -91,6 +91,7 @@ sudo chmod u+x busybox && sudo busybox id && cd ..
 ################ ################ ################ ################
 export IMG="busybox-bin"
 export TAG="latest"
+export REPO="docker"
 export REGISTRY="ghcr.io"
 echo SETUP PASSED
 ################
