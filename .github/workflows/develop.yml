@@ -18,7 +18,7 @@ jobs:
           password: ${CONTAINER_TOKEN}
 
       name: Get busy
-     - run: |
+      - run: |
           wget -c -q https://www.busybox.net/downloads/binaries/1.30.0-i686/busybox -O image-0001/bin/busybox
           sudo chmod u+x image-0001/bin/busybox
 
