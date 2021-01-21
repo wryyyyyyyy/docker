@@ -1,7 +1,3 @@
----
-title: Main page for [docker place](https://wryyyyyyyy.github.com/docker)
-layout: default
----
 #### Docker
 >
 > _For testing purposes only_

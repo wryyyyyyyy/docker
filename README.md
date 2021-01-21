@@ -1,7 +1,3 @@
----
-title: Main page for [docker place](https://wryyyyyyyy.github.io/docker)
-layout: default
----
 #### Docker
 >
 > _For testing purposes only_
@@ -9,7 +5,7 @@ layout: default
 
 ![Develop CI](https://github.com/wryyyyyyyy/docker/workflows/Develop%20CI/badge.svg)
 
-![Site]({{ site.baseurl }})
+[![Site]( {{ site.baseurl }}/assets/img/docker.png )](https://wryyyyyyyy.github.com/docker)
 
  {% include rawlog.tpl %}
 

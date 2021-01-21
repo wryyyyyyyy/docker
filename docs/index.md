@@ -1,15 +1,9 @@
----
-title: Main page for [docker place](https://wryyyyyyyy.github.com/docker)
-layout: default
----
-#### Docker
+#### Last log
 >
-> _For testing purposes only_
+> _For educations purposes only_
 >
 
-![Develop CI](https://github.com/wryyyyyyyy/docker/workflows/Develop%20CI/badge.svg)
-
- [![Site](/docker/assets/img/docker.png)](https://wryyyyyyyy.github.com/docker)
+ [![Site]( {{ site.baseurl }}/assets/img/docker.png )](https://wryyyyyyyy.github.com/docker)
 
  {% include rawlog.tpl %}
 
