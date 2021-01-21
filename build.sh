@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 #!/bin/sh
 ################
 echo STAGE BUILD
@@ -18,6 +19,9 @@ echo STAGE DEPLOY FINISHED
 cd .. && ./post.sh
 =======
 #!/bin/bash
+=======
+#!/bin/sh
+>>>>>>> changed build
 ################
 echo STAGE BUILD
 <<<<<<< HEAD

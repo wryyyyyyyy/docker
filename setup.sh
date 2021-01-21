@@ -89,8 +89,8 @@ echo waiting...
 =======
 sudo chmod u+x busybox && sudo busybox id && cd ..
 ################ ################ ################ ################
-export IMG="bussy"
-export TAG="v1-busybox"
+export IMG="busybox-bin"
+export TAG="latest"
 export REGISTRY="ghcr.io"
 echo SETUP PASSED
 ################

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 #!/bin/sh
 ################
 echo STAGE POST
@@ -7,6 +8,9 @@ echo "${GITHUB_ACTION} ${GITHUB_ACTIONS} ${GITHUB_JOB} by ${RUNNER_USER} on ${Im
 ################
 =======
 #!/bin/bash
+=======
+#!/bin/sh
+>>>>>>> changed build
 ################
 echo STAGE POST
 <<<<<<< HEAD
