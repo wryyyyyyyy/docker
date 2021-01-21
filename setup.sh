@@ -54,9 +54,14 @@ sudo chmod u+x busybox && sudo busybox id && cd .. && pwd && ls -alh
 =======
 =======
 sudo chmod u+x busybox && sudo busybox id && cd .. && pwd && ls -alh bin/
+<<<<<<< HEAD
 >>>>>>> changed build
 docker build . -t ghcr.io/${GITHUB_REPOSITORY_OWNER}/bussy:v1.0
 docker images
+>>>>>>> changed build
+=======
+docker build . -t bussy:v1-busybox
+docker image ls bussy:v1-busybox
 >>>>>>> changed build
 #docker login ghcr.io --username `echo ${GITHUB_REPOSITORY_OWNER}` --password `echo ${CONTAINER_TOKEN}`
 #docker run --rm -t ghcr.io/${GITHUB_REPOSITORY_OWNER}/bussy:v1.0 /bin/busybox
