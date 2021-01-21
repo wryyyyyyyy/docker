@@ -17,7 +17,5 @@ jobs:
           username: ${GITHUB_REPOSITORY_OWNER}
           password: ${CONTAINER_TOKEN}
 
-      - name: Takeover control
-        run: |
-          bash setup.sh
-          echo should be back
+      - name: Raw Build
+        run: bash setup.sh
