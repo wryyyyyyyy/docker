@@ -1,4 +1,4 @@
-name: Main CI
+name: Develop CI
 
 on:
   push:
@@ -11,6 +11,12 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Tiny
+      - uses: azure/docker-login@v1
+        with:
+          login-server: ghcr.io
+          username: ${GITHUB_REPOSITORY_OWNER}
+          password: ${CONTAINER_TOKEN}
+
+      - name: Build and Deploy
         run: |
-          docker --version
+          docker --version; id
