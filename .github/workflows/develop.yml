@@ -26,4 +26,5 @@ jobs:
           chmod u+x image-0001/bin/busybox
           docker build image-0001/ -t bussy:v1
           docker image ls bussy:v1
+          docker tag bussy:v1 ghcr.io/${GITHUB_REPOSITORY_OWNER}/bussy:v1
           docker push ghcr.io/${GITHUB_REPOSITORY_OWNER}/bussy:v1
