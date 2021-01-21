@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 ################
 echo STAGE BUILD
 docker build . -t ${IMG}:${TAG}

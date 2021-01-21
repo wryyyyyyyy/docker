@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 ################
 echo STAGE POST
 rm -rf image-0001/bin
