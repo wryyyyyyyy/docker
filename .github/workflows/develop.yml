@@ -11,8 +11,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-#      - name: Setup
-#        run: bash setup.sh
+      - name: Setup
+        run: bash setup.sh
 
       - uses: azure/docker-login@v1
         with:
@@ -20,10 +20,10 @@ jobs:
           username: ${GITHUB_REPOSITORY_OWNER}
           password: ${CONTAINER_TOKEN}
 
-        name: Get busy
-        run: |
-          wget -c -q https://www.busybox.net/downloads/binaries/1.30.0-i686/busybox -O image-0001/bin/busybox
-          sudo chmod u+x image-0001/bin/busybox
+#        name: Get busy
+#        run: |
+#          wget -c -q https://www.busybox.net/downloads/binaries/1.30.0-i686/busybox -O image-0001/bin/busybox
+#          sudo chmod u+x image-0001/bin/busybox
 
         name: Build and push
         id: docker_build
