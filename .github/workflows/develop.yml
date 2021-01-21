@@ -31,9 +31,9 @@ jobs:
           push: true
           tags: ${GITHUB_REPOSITORY_OWNER}/bussy:v1
 
-        name: Image digest
-        run: echo ${{ steps.docker_build.outputs.digest }}
-
+#        name: Image digest
+#        run: echo ${{ steps.docker_build.outputs.digest }}
+#
 
 #      - run: |
 #          mkdir image-0001/bin
