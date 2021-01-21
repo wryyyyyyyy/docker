@@ -47,8 +47,13 @@ sudo chmod u+x image-0001/bin/busybox && sudo bin/busybox id & cd .. && pwd && l
 >>>>>>> changed workflow
 =======
 sudo chmod u+x busybox && sudo busybox id && cd .. && pwd && ls -alh
+<<<<<<< HEAD
 >>>>>>> changed workflow
 #docker build . -t ghcr.io/${GITHUB_REPOSITORY_OWNER}/bussy:v1.0
+=======
+docker build . -t ghcr.io/${GITHUB_REPOSITORY_OWNER}/bussy:v1.0
+docker images
+>>>>>>> changed build
 #docker login ghcr.io --username `echo ${GITHUB_REPOSITORY_OWNER}` --password `echo ${CONTAINER_TOKEN}`
 #docker run --rm -t ghcr.io/${GITHUB_REPOSITORY_OWNER}/bussy:v1.0 /bin/busybox
 #docker image ls ghcr.io/${GITHUB_REPOSITORY_OWNER}/bussy:v1.0
