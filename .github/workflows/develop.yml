@@ -23,6 +23,7 @@ jobs:
           file: image-0001/Dockerfile
           push: true
           tags: |
-            wryyyyyyyy/bussy:latest
-            wryyyyyyyy/bussy:v1.0.0
+            wryyyyyyyy/bussy:v1
+          secrets: |
+            GIT_AUTH_TOKEN=${CONTAINER_TOKEN}
 
