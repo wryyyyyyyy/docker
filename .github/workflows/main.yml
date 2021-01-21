@@ -19,4 +19,5 @@ jobs:
 
       - name: Tiny
         run: |
-          pwd
+          cd image-0002 && docker build . -t tiny:ultra
+          docker image ls tiny:ultra
