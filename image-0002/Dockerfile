@@ -1,3 +1,3 @@
 FROM scratch
 COPY . /
-ENTRYPOINT ["/bin/wtf;", "echo $?"]
+ENTRYPOINT ["/bin/wtf", " ; echo $?"]

@@ -1,10 +1,9 @@
 #### Docker
 >
-> _For educational purposes only_
+> _image-0002 > Tiny docker image_ < check the size, lmao
+>
+> _image-0001 > Busybox binary docker image_
 >
 
-![Develop CI](https://github.com/wryyyyyyyy/docker/workflows/Develop%20CI/badge.svg)
+[![Site]( {{ site.baseurl }}/_site/assets/img/ultra_tiny_docker.png )](https://wryyyyyyyy.github.com/docker)
 
-[![Site]( {{ site.baseurl }}/assets/img/docker.png )](https://wryyyyyyyy.github.com/docker)
-
-{{ content }}
