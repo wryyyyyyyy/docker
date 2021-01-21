@@ -93,7 +93,7 @@ docker image ls $IMG:$TAG
 >>>>>>> changed build
 
 echo STAGE TEST
-docker run --rm -t $IMG:$TAG: /bin/busybox
+docker run --rm -t --name ${IMG} ${IMG}:${TAG} /bin/busybox
 
 
 #docker build . -t ghcr.io/wryyyyyyyy/scratch:1.0
