@@ -1,0 +1,3 @@
+FROM tiny:ultra as builder
+WORKDIR /
+COPY --from=builder / /

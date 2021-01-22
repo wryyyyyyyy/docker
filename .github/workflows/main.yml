@@ -21,3 +21,8 @@ jobs:
         run: |
           cd image-0002 && docker build . -t tiny:ultra
           docker image ls tiny:ultra
+
+      - name: Builder
+        run: |
+          docker build -f Dockerfile_builder -t tiny:builder
+          docker image ls tiny:builder
