@@ -1,3 +1,4 @@
 FROM tiny:ultra as builder
 WORKDIR /
-COPY --from=builder / /
+COPY --from=builder / .
+ENTRYPOINT ["./init"]
