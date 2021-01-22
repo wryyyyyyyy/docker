@@ -24,5 +24,5 @@ jobs:
 
       - name: Builder
         run: |
-          docker build -f Dockerfile_builder -t tiny:builder
+          docker build -f Dockerfile_builder . -t tiny:builder
           docker image ls tiny:builder
