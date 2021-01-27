@@ -3,7 +3,7 @@ name: Main CI
 on:
   push:
     branches:
-    - main
+    - pnscan
 
 jobs:
   build:
@@ -11,8 +11,23 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Tiny
+      - name: prepare
         run: |
-          cd image-0002 && docker build . -t tiny:ultra
-          docker image ls tiny:ultra
+          cd builder && wget ftp://ftp.lysator.liu.se/pub/unix/pnscan/pnscan-1.11.tar.gz
+          tar zxvf pnscan-1.11.tar.gz && cd pnscan-1.11
+          gcc -Wall -g -O -c -o pnscan.o pnscan.c
+          gcc -Wall -g -O -c -o bm.o bm.c
+          gcc -Wall -g -O -c -o version.o version.c
+          gcc -Wall -g -O -Wl,-s -o pnscan pnscan.o bm.o version.o -lpthread -lnsl -static
+          cd .. && pwd && ls -la pnscan-1.11/
 
+      - name: dockerize
+        run: |
+          cd builder && docker build . -t pnscan:v1
+          docker image ls pnscan:v1
+          echo DEFAULT CONTAINER RUN
+          echo STARTED WITH docker run --rm -t pnscan:v1
+          docker run --rm -t pnscan:v1
+          echo PARAMETERS CONTAINER RUN
+          echo STARTED WITH docker run --rm -t pnscan:v1 45.33.32.156 20:30
+          docker run --rm -t pnscan:v1 45.33.32.156 20:30
