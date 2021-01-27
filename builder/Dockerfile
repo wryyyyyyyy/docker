@@ -1,4 +1,4 @@
-FROM scratch
+FROM alpine:latest
 WORKDIR /
 COPY ./pnscan-1.11/pnscan ./pnscan-1.11/ipsort ./
 ENTRYPOINT ["./pnscan"]
