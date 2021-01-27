@@ -10,7 +10,9 @@ RUN pwd && ls -la pnscan-1.11/ && ls -la pnscan-1.11/bin/ #&& ldd pnscan-1.11/pn
 
 FROM scratch
 WORKDIR /
-COPY --from=builder builder/pnscan-1.11/bin/ builder/pnscan-1.11/pnscan builder/pnscan-1.11/ipsort ./
+RUN mkdir bin
+COPY --from=builder builder/pnscan-1.11/bin/sh ./bin/sh
+COPY --from=builder builder/pnscan-1.11/pnscan builder/pnscan-1.11/ipsort ./
 RUN pwd && ls -la
 ENTRYPOINT ["./pnscan"]
 CMD ["-h"]
