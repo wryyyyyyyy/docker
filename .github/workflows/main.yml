@@ -31,6 +31,6 @@ jobs:
           echo PARAMETERS IP CONTAINER RUN
           echo STARTED WITH docker run --rm -t pnscan:v1 45.33.32.156 20:30
           docker run --rm -t pnscan:v1 45.33.32.156 20:30
-          echo PARAMETERS HOSTNAME CONTAINER RUN
-          echo STARTED WITH docker run --rm -t pnscan:v1 scanme.nmap.org 20:30
-          docker run --rm -t pnscan:v1 scanme.nmap.org 20:30
+#          echo PARAMETERS HOSTNAME CONTAINER RUN
+#          echo STARTED WITH docker run --rm -t pnscan:v1 scanme.nmap.org 20:30
+#          docker run --rm -t pnscan:v1 scanme.nmap.org 20:30
