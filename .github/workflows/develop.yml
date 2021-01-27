@@ -9,13 +9,15 @@ jobs:
   build:
     runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v2 #1
+        with:
+          prepare to build
 
-      - uses: azure/docker-login@v1
+      - uses: azure/docker-login@v1 #2
         with:
           login-server: ghcr.io
           username: ${GITHUB_REPOSITORY_OWNER}
           password: ${CONTAINER_TOKEN}
 
-      - name: Build and Deploy
+      - name: Build3
         run: ./setup.sh
