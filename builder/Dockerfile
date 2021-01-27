@@ -8,7 +8,7 @@ RUN pwd && ls -la
 
 FROM scratch
 WORKDIR /
-COPY --from=builder ./pnscan-1.11/pnscan ./pnscan-1.11/ipsort ./
+COPY --from=builder builder/pnscan-1.11/pnscan builder/pnscan-1.11/ipsort ./
 RUN pwd && ls -la
 ENTRYPOINT ["./pnscan"]
 CMD ["-h"]
