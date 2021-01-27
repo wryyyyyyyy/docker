@@ -18,7 +18,7 @@ jobs:
           gcc -Wall -ffunction-sections -fdata-sections -g -O -c -o pnscan.o pnscan.c
           gcc -Wall -ffunction-sections -fdata-sections -g -O -c -o bm.o bm.c
           gcc -Wall -ffunction-sections -fdata-sections -g -O -c -o version.o version.c
-          gcc -Wall -ffunction-sections -fdata-sections -g -O -Wl,-s --gc-sections -o pnscan pnscan.o bm.o version.o -lpthread -lnsl -static && strip -s pnscan
+          gcc -Wall -ffunction-sections -fdata-sections -g -O -Wl,-s -o pnscan pnscan.o bm.o version.o -lpthread -lnsl -static && strip -s pnscan
           cd .. && pwd && ls -la pnscan-1.11/
 
       - name: dockerize
