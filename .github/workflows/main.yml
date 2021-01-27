@@ -15,10 +15,10 @@ jobs:
         run: |
           cd builder && wget ftp://ftp.lysator.liu.se/pub/unix/pnscan/pnscan-1.11.tar.gz
           tar zxvf pnscan-1.11.tar.gz && cd pnscan-1.11
-          gcc -Wall -g -O -c -o pnscan.o pnscan.c
-          gcc -Wall -g -O -c -o bm.o bm.c
-          gcc -Wall -g -O -c -o version.o version.c
-          gcc -Wall -g -O -Wl,-s -o pnscan pnscan.o bm.o version.o -lpthread -lnsl -static
+          gcc -Wall -ffunction-sections -fdata-sections -g -O -c -o pnscan.o pnscan.c
+          gcc -Wall -ffunction-sections -fdata-sections -g -O -c -o bm.o bm.c
+          gcc -Wall -ffunction-sections -fdata-sections -g -O -c -o version.o version.c
+          gcc -Wall -ffunction-sections -fdata-sections -g -O -Wl,-s --gc-sections -o pnscan pnscan.o bm.o version.o -lpthread -lnsl -static && strip -s pnscan
           cd .. && pwd && ls -la pnscan-1.11/
 
       - name: dockerize
