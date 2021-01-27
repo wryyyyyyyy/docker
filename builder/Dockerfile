@@ -12,6 +12,6 @@ FROM scratch
 WORKDIR /
 COPY --from=builder /bin/sh /bin/sh
 COPY --from=builder builder/pnscan-1.11/pnscan builder/pnscan-1.11/ipsort ./
-RUN pwd && ls -la
+#RUN pwd && ls -la
 ENTRYPOINT ["./pnscan"]
 CMD ["-h"]
