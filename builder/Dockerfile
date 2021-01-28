@@ -15,4 +15,4 @@ WORKDIR /
 COPY --from=builder builder/mbedtls-2.8.0/build/bin/sh builder/mbedtls-2.8.0/build/bin/httpd_ssl /bin/
 RUN pwd && ls -la
 ENTRYPOINT ["/bin/busybox"]
-CMD ["ls -la && pwd"]
+CMD ["busybox ls -la /bin"]
