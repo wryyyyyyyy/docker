@@ -3,7 +3,7 @@ name: Main CI
 on:
   push:
     branches:
-    - pnscan
+    - httpd_ssl
 
 jobs:
   build:
@@ -13,14 +13,14 @@ jobs:
 
       - name: dockerize
         run: |
-          cd builder && docker build . -t pnscan:v1
-          docker image ls pnscan:v1
+          cd builder && docker build . -t httpd_ssl:v1
+          docker image ls httpd_ssl:v1
           echo PARAMETERS DEFAULT CONTAINER RUN
-          echo STARTED WITH docker run --rm -t pnscan:v1
-          docker run --rm -t pnscan:v1
-          echo PARAMETERS IP CONTAINER RUN
-          echo STARTED WITH docker run --rm -t pnscan:v1 45.33.32.156 20:30
-          docker run --rm -t pnscan:v1 45.33.32.156 20:30
-          echo PARAMETERS HOSTNAME CONTAINER RUN
-          echo STARTED WITH docker run --rm -t pnscan:v1 scanme.nmap.org 20:30
-          docker run --rm -t pnscan:v1 scanme.nmap.org 20:30
+          echo STARTED WITH docker run --rm -t httpd_ssl:v1
+          docker run --rm -t httpd_ssl:v1
+#          echo PARAMETERS IP CONTAINER RUN
+#          echo STARTED WITH docker run --rm -t pnscan:v1 45.33.32.156 20:30
+#          docker run --rm -t pnscan:v1 45.33.32.156 20:30
+#          echo PARAMETERS HOSTNAME CONTAINER RUN
+#          echo STARTED WITH docker run --rm -t pnscan:v1 scanme.nmap.org 20:30
+#          docker run --rm -t pnscan:v1 scanme.nmap.org 20:30

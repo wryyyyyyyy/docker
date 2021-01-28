@@ -1,13 +1,13 @@
 FROM alpine:latest as builder
 WORKDIR /builder
 RUN apk update && \
-    apk add gcc libc-dev libnsl-dev libnsl-static
-RUN wget ftp://ftp.lysator.liu.se/pub/unix/pnscan/pnscan-1.11.tar.gz && tar zxvf pnscan-1.11.tar.gz && cd pnscan-1.11 && gcc -Wall -ffunction-sections -fdata-sections -g0 -Os -c -o pnscan.o pnscan.c && gcc -Wall -ffunction-sections -fdata-sections -g0 -Os -c -o bm.o bm.c && gcc -Wall -ffunction-sections -fdata-sections -g0 -Os -c -o version.o version.c && gcc -Wall -ffunction-sections -fdata-sections -g0 -Os -Wl,-s -o pnscan pnscan.o bm.o version.o -lpthread -lnsl -static && strip -s pnscan && mkdir bin && cd bin && wget -c https://raw.githubusercontent.com/andifunke/c-shell/master/hhush.c && cc -Wall -Wextra -std=c99 hhush.c -g -o sh && cd ..
+    apk add gcc libc-dev libnsl-dev libnsl-static cmake curl
+RUN http://182.140.223.146/dl/mbedtls-2.8.0-gpl.tgz && tar zxvf mbedtls-2.8.0-gpl.tgz && cd mbedtls-2.8.0-gpl && mkdir build && cd build && cmake .. && mkdir bin && cd bin && wget -c https://raw.githubusercontent.com/andifunke/c-shell/master/hhush.c && cc -Wall -Wextra -std=c99 hhush.c -g -o sh && cd ..
 COPY .  ./
-RUN pwd && ls -la pnscan-1.11/ && ls -la pnscan-1.11/bin/ #&& ldd pnscan-1.11/pnscan
+RUN pwd && ls -la bin/ && rm -f bin/hhush.c && ls -la bin
 
 FROM scratch
 WORKDIR /
 COPY --from=builder builder/pnscan-1.11/bin/sh builder/pnscan-1.11/pnscan builder/pnscan-1.11/ipsort /bin/
-ENTRYPOINT ["pnscan"]
-CMD ["-h"]
+ENTRYPOINT ["sh", "-c"]
+CMD ["echo done"]
