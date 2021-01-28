@@ -10,5 +10,5 @@ RUN pwd && cd mbedtls-2.7.5/build && export C_FLAGS="-static -static-libgcc -sta
 FROM scratch
 WORKDIR /
 COPY --from=builder /builder/mbedtls-2.7.5/build/bin/sh /builder/mbedtls-2.7.5/build/bin/httpd_ssl /bin/
-ENTRYPOINT ["/bin/sh", "-c"]
-CMD ["hostname"]
+ENTRYPOINT ["/bin/sh", "/bin/httpd_ssl"]
+CMD ["-h"]
