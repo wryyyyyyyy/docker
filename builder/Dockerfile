@@ -10,8 +10,9 @@ RUN pwd && sed 's/CMAKE_EXE_LINKER_FLAGS:STRING=/CMAKE_EXE_LINKER_FLAGS:STRING=-
 #ENTRYPOINT ["/bin/sh", "-c"]
 #CMD ["echo done"]
 
-FROM scratch
+FROM busybox:latest
 WORKDIR /
 COPY --from=builder builder/mbedtls-2.8.0/build/bin/sh builder/mbedtls-2.8.0/build/bin/httpd_ssl /bin/
+RUN ls -la /bin
 ENTRYPOINT ["/bin/httpd_ssl"]
 CMD ["-h"]
