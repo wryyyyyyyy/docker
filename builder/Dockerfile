@@ -12,7 +12,7 @@ RUN pwd && cd mbedtls-2.7.5/build && export C_FLAGS="-static" && make -I./includ
 
 FROM scratch
 WORKDIR /
-COPY --from=builder /builder/mbedtls-2.8.0/build/bin/sh /builder/mbedtls-2.8.0/build/bin/httpd_ssl /bin/
-RUN pwd && ls -la
+COPY --from=builder /builder/mbedtls-2.7.5/build/bin/sh /builder/mbedtls-2.7.5/build/bin/httpd_ssl /bin/
+#RUN pwd && ls -la
 ENTRYPOINT ["httpd_ssl"]
 CMD ["-h"]
