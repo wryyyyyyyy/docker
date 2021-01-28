@@ -6,5 +6,5 @@ C_FLAGS = -static -Wall -Wextra -W -Wdeclaration-after-statement -Wwrite-strings
 
 C_DEFINES =
 
-C_INCLUDES = -I/root/dev/_tmp/mbedtls-2.8.0/include
+C_INCLUDES = -I/mbedtls-2.7.5/build/include/mbedtls
 
