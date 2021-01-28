@@ -15,9 +15,10 @@ jobs:
         run: |
           cd builder && docker build . -t httpd_ssl:v1
           docker image ls httpd_ssl:v1
-          echo PARAMETERS DEFAULT CONTAINER RUN
-          echo STARTED WITH docker run --rm -t httpd_ssl:v1
           docker run --rm -t httpd_ssl:v1
+#          echo PARAMETERS DEFAULT CONTAINER RUN
+#          echo STARTED WITH docker run --rm -t httpd_ssl:v1
+#          docker run --rm -t httpd_ssl:v1
 #          echo PARAMETERS IP CONTAINER RUN
 #          echo STARTED WITH docker run --rm -t pnscan:v1 45.33.32.156 20:30
 #          docker run --rm -t pnscan:v1 45.33.32.156 20:30
