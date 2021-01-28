@@ -3,6 +3,7 @@ WORKDIR /builder
 RUN apk update && \
     apk add build-base libnsl-dev libnsl-static make cmake perl
 RUN wget -c http://182.140.223.146/dl/mbedtls-2.7.5-gpl.tgz && tar zxvf mbedtls-2.7.5-gpl.tgz 2>&1 && cd mbedtls-2.7.5 && mkdir build && cd build && cmake .. && mkdir bin && cd bin && wget -c https://raw.githubusercontent.com/andifunke/c-shell/master/hhush.c && cc -static -Wall -Wextra -std=c99 hhush.c -g -o sh && cd ..
+COPY ./config.h ./mbedtls-2.7.5/build/include/mbedtls/config.h
 COPY ./flags.make ./mbedtls-2.7.5/build/programs/ssl/CMakeFiles/ssl_server2.dir/flags.make
 RUN pwd && cd mbedtls-2.7.5/build && make && cp programs/ssl/ssl_server2 bin/httpd_ssl && ls -la bin && ldd bin/httpd_ssl
 #RUN echo STARTING SERVER `hostname` WITH DEFAULT PARAMETERS:  ./programs/ssl/ssl_server2 && ./programs/ssl/ssl_server2
