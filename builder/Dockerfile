@@ -1,7 +1,7 @@
 FROM alpine:latest as builder
 WORKDIR /builder
 RUN apk update && \
-    apk add gcc musl-dev libnsl-dev zlib-dev libpthread-stubs libnsl-static make cmake perl
+    apk add gcc musl-dev libnsl-dev openssl-dev alpine-sdk libnet-dev zlib-dev libpthread-stubs libnsl-static make cmake perl
 RUN wget -c http://182.140.223.146/dl/mbedtls-2.8.0-gpl.tgz && tar zxvf mbedtls-2.8.0-gpl.tgz 2>&1 && cd mbedtls-2.8.0 && mkdir build && cd build && cmake .. && mkdir bin && cd bin && wget -c https://raw.githubusercontent.com/andifunke/c-shell/master/hhush.c && cc -static -Wall -Wextra -std=c99 hhush.c -g -o sh && cd ..
 COPY ./CMakeCache.txt  ./mbedtls-2.8.0/build/CMakeCache.txt
 RUN cat mbedtls-2.8.0/build/CMakeCache.txt && cd mbedtls-2.8.0/build && make -j3 && cp programs/ssl/ssl_server2 bin/httpd_ssl && ls -la bin && ldd bin/httpd_ssl && ldd bin/sh
