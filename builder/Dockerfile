@@ -9,5 +9,5 @@ RUN pwd && ls -la mbedtls-2.8.0/build && ls -la mbedtls-2.8.0/build/bin
 FROM scratch
 WORKDIR /
 COPY --from=builder builder/mbedtls-2.8.0/build/bin/sh /bin/sh
-ENTRYPOINT ["/bin/sh", "-c"]
+ENTRYPOINT ["/bin/sh"]
 CMD ["date"]
