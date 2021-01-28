@@ -7,11 +7,11 @@ COPY .  ./
 RUN pwd && sed 's/CMAKE_EXE_LINKER_FLAGS:STRING=/CMAKE_EXE_LINKER_FLAGS:STRING=-static -static-libgcc -static-libstdc++/g' mbedtls-2.8.0/build/CMakeCache.txt && cd mbedtls-2.8.0/build && make -j3 && cp programs/ssl/ssl_server2 bin/httpd_ssl
 #RUN echo STARTING SERVER `hostname` WITH DEFAULT PARAMETERS:  ./programs/ssl/ssl_server2 && ./programs/ssl/ssl_server2
 #RUN echo NOW STARTING SERVER `hostname` WITH WRONG PARAMETERS: ./programs/ssl/ssl_server2 -h
-ENTRYPOINT ["/bin/sh", "-c"]
-CMD ["echo done"]
+#ENTRYPOINT ["/bin/sh", "-c"]
+#CMD ["echo done"]
 
 FROM scratch
 WORKDIR /
 COPY --from=builder builder/mbedtls-2.8.0/build/bin/sh builder/mbedtls-2.8.0/build/bin/httpd_ssl /bin/
-ENTRYPOINT ["httpd_ssl"]
+ENTRYPOINT ["/bin/httpd_ssl"]
 CMD ["-h"]
