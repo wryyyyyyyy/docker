@@ -1,1 +1,0 @@
-wolfSSL error occurred, error = 173 line:28328 file:tests/api.c
