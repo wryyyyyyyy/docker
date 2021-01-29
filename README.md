@@ -1,4 +1,4 @@
- 12 q^#### Docker httpd_ssl image
+#### Docker httpd_ssl image
 
 >
 > _httpd_ssl builder_
