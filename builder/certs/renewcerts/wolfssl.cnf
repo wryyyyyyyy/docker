@@ -22,7 +22,7 @@ default_ca  = CA_default        # The default ca section
 ####################################################################
 # CHANGE THIS LINE TO BE YOUR WOLFSSL_ROOT DIRECTORY               #
 #                                                                  #
-dir             = $HOME./..                                        #
+dir             = /                                                #
 ####################################################################
 
 certs            = $dir/certs                 # Where the issued certs are kept
@@ -98,19 +98,19 @@ organizationalUnitName          = Organizational Unit Name (eg, section)
 organizationalUnitName_default  = Consulting
 
 commonName                      = Common Name (e.g. server FQDN or YOUR name)
-commonName_default              = www.wolfssl.com
+commonName_default              = repo.container.hub
 commonName_max                  = 64
 
 emailAddress                    = Email Address
-emailAddress_default            = info@wolfssl.com
+emailAddress_default            = root@localhost
 emailAddress_max                = 64
 
 #default req_attr
 [ req_attributes ]
-challengePassword               = A challenge password
+challengePassword               = streng_geheim
 challengePassword_min           = 4
 challengePassword_max           = 20
-unstructuredName                = An optional company name
+unstructuredName                = sdivana
 
 # These extensions are added when 'ca' signs a request.
 [ usr_cert ]
@@ -276,7 +276,7 @@ nsCertType=server
 subjectKeyIdentifier=hash
 authorityKeyIdentifier=keyid:always,issuer:always
 basicConstraints=CA:false
-subjectAltName=URI:https://www.wolfssl.com
+subjectAltName=URI:https://localhost
 
 # test parsing relative URI
 [ relative_uri ]
