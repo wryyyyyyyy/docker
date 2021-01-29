@@ -1,5 +1,5 @@
 FROM scratch
 WORKDIR /
-COPY /bin /bin
-ENTRYPOINT ["httpd_ssl"]
+COPY ./ ./
+ENTRYPOINT ["./httpd_ssl"]
 CMD ["-?"]
