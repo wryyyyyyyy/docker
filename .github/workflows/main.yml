@@ -3,7 +3,7 @@ name: Main CI
 on:
   push:
     branches:
-    - stud
+    - mbedtls
 
 jobs:
   build:
@@ -13,9 +13,9 @@ jobs:
 
       - name: dockerize
         run: |
-          cd builder && docker build . -t stud:v1
-          docker image ls stud:v1
-          docker run --rm -t stud:v1
+          cd builder && docker build . -t mbedtls:v1
+          docker image ls mbedtls:v1
+          docker run --rm -t mbedtls:v1
 #          echo PARAMETERS DEFAULT CONTAINER RUN
 #          echo STARTED WITH docker run --rm -t httpd_ssl:v1
 #          docker run --rm -t httpd_ssl:v1

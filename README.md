@@ -1,6 +1,5 @@
-#### Docker stud image
+#### Docker mbedtls image
 
 >
-> _TLS/SSL terminator_
+> _TLS/SSL web server_
 >
-

@@ -1,5 +1,5 @@
 FROM scratch
 WORKDIR /
 COPY ./ ./
-ENTRYPOINT ["./stud"]
+ENTRYPOINT ["./ssl_server"]
 CMD ["-h"]
