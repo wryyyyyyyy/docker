@@ -2,4 +2,4 @@ FROM scratch
 WORKDIR /
 COPY ./ ./
 ENTRYPOINT ["/iputils/./traceroute6"]
-CMD ["-h"]
+CMD ["nmap.org"]
