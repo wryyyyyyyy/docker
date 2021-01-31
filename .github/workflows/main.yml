@@ -11,9 +11,13 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: prepare
+        run: |
+          cd builder && mkdir dev && ln -s /dev/eth0 dev/eth0
+
       - name: dockerize
         run: |
-          cd builder && docker build . -t mbedtls:v1
+          pwd && cd builder && docker build . -t mbedtls:v1
           perl scripts/plif.pl && ip address show
           docker image ls mbedtls:v1
           docker run --rm -t mbedtls:v1
