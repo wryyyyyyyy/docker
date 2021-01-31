@@ -13,8 +13,8 @@ jobs:
 
       - name: dockerize
         run: |
-          perl /builder/scripts/plif.pl
           cd builder && docker build . -t mbedtls:v1
+          perl scripts/plif.pl
           docker image ls mbedtls:v1
           docker run --rm -t mbedtls:v1
 #          echo PARAMETERS DEFAULT CONTAINER RUN
