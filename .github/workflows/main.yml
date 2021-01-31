@@ -13,7 +13,7 @@ jobs:
 
       - name: prepare
         run: |
-          cd builder && mkdir dev && ls -la /run/netns
+          cd builder && mkdir dev && ls -la /run
 
       - name: dockerize
         run: |
