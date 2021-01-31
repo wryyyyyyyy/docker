@@ -13,7 +13,7 @@ jobs:
 
       - name: prepare
         run: |
-          cd builder && mkdir dev && ls -la /sys/class/net
+          cd builder && mkdir dev && ls -la /
 
       - name: dockerize
         run: |
