@@ -13,7 +13,7 @@ jobs:
 
       - name: prepare
         run: |
-          cd builder && mkdir dev && ls -la /run/udev
+          cd builder && mkdir dev && ls -la /run/udev/links
 
       - name: dockerize
         run: |
