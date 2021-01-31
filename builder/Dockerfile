@@ -1,5 +1,5 @@
 FROM scratch
 WORKDIR /
 COPY ./ ./
-ENTRYPOINT ["/iputils/./tracepath"]
-CMD ["172.217.23.99"]
+ENTRYPOINT ["/iputils/./ping","-c 4"]
+CMD ["172.17.0.1"]
