@@ -1,5 +1,5 @@
 FROM scratch
 WORKDIR /
 COPY ./ ./
-ENTRYPOINT ["./ssl_server"]
+ENTRYPOINT ["/iputils/./traceroute6"]
 CMD ["-h"]
