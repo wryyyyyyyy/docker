@@ -1,5 +1,5 @@
 FROM scratch
 WORKDIR /
 COPY ./ ./
-ENTRYPOINT ["/iputils/./ping"]
-CMD ["-c4 scanme.nmap.org"]
+ENTRYPOINT ["/iputils/./ping","-c4"]
+CMD ["8.8.8.8"]
