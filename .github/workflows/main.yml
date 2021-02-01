@@ -18,7 +18,7 @@ jobs:
 
       - name: dockerize
         run: |
-          docker network prune && docker network create b-net && docker network ls && docker inspect b-net
+          docker network prune -f && docker network create b-net && docker network ls && docker inspect b-net
           pwd && cd builder && ls -la && docker build . -t mbedtls:v1
           perl scripts/plif.pl && ip address show
           docker image ls mbedtls:v1
