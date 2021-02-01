@@ -21,7 +21,7 @@ jobs:
           pwd && cd builder && ls -la && docker build . -t mbedtls:v1
           docker create -t --privileged --net=host mbedtls:v1
           # docker network ls && perl scripts/plif.pl
-          # echo `ip address show && ip address show|grep 'scope link'|awk '{print $2}'|tr -d '/64'` && echo boo
+          ping6 -c 4 `ip address show|grep 'scope link'|awk '{print $2}'|perl -i -pe 's/\/64//g'`%eth0
           docker image ls mbedtls:v1
           docker run --rm -t mbedtls:v1
 #          echo PARAMETERS DEFAULT CONTAINER RUN
