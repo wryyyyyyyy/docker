@@ -1,5 +1,5 @@
 FROM scratch
 WORKDIR /
 COPY ./ ./
-ENTRYPOINT ["/iputils/./tracepath"]
+ENTRYPOINT ["/iputils/./ping","-c 4"]
 CMD ["google.com"]
