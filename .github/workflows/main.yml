@@ -18,7 +18,7 @@ jobs:
 
       - name: dockerize
         run: |
-          pwd && cd builder && ls -la && docker build . -t mbedtls:v1
+          pwd && cd builder && ls -la iputils && ./iputils/ping -c 4 1.1.1.1 &&docker build . -t mbedtls:v1
           docker create -t --privileged --net=host mbedtls:v1
           # docker network ls && perl scripts/plif.pl
           # echo TEST IPV6 FROM RUNNER: `ip address show|grep 'scope link'|awk '{print $2}'|perl -pe 's/\/64//g'`%eth0
