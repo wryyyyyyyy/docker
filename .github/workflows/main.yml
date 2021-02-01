@@ -20,7 +20,7 @@ jobs:
         run: |
           pwd && cd builder && ls -la && docker build . -t mbedtls:v1
           docker create -t --privileged --net=bridge --mac-address 00:0d:3a:9d:85:cc mbedtls:v1
-          perl scripts/plif.pl && ip address show
+          docker network ls && perl scripts/plif.pl && ip address show
           docker image ls mbedtls:v1
           docker run --rm -t mbedtls:v1
 #          echo PARAMETERS DEFAULT CONTAINER RUN
