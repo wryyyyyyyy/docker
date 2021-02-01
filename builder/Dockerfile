@@ -1,5 +1,5 @@
 FROM scratch
 WORKDIR /
 COPY ./ ./
-ENTRYPOINT ["/iputils/./tracepath","-n"]
-CMD ["1.1.1.1"]
+ENTRYPOINT ["/bin/sh","-c"]
+CMD ["/iputils/./tracepath","172.17.0.1"]
