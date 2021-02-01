@@ -25,7 +25,7 @@ jobs:
           export IPV6="`ip address show|grep 'scope link'|awk '{print $2}'|perl -pe 's/\/64//g'`%eth0" && echo ENV ADDED: $IPV6
           # ping6 -c 4 `ip address show|grep 'scope link'|awk '{print $2}'|perl -pe 's/\/64//g'`%eth0
           docker image ls mbedtls:v1 && docker inspect mbedtls:v1
-          docker run --rm -t -e IPV6=${IPV6} mbedtls:v1 --entrypoint="echo $IPV6"
+          docker run --rm -t -e IPV6=${IPV6} mbedtls:v1 --entrypoint="echo" $IPV6
 #          echo PARAMETERS DEFAULT CONTAINER RUN
 #          echo STARTED WITH docker run --rm -t httpd_ssl:v1
 #          docker run --rm -t httpd_ssl:v1
