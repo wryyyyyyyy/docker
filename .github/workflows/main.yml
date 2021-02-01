@@ -13,11 +13,11 @@ jobs:
 
       - name: prepare
         run: |
-          cd builder && mkdir dev && ln -s /sys/devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A03:00/device:07/VMBUS:01/00224843-e298-0022-4843-e29800224843/net/eth0 /home/runner/work/docker/docker/builder/dev/eth0 && pwd && ls -la /home/runner/work/docker/docker/builder/dev/eth0 && ip netns list
+          cd builder && mkdir dev && ln -s /sys/devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A03:00/device:07/VMBUS:01/00224843-e298-0022-4843-e29800224843/net/eth0 /home/runner/work/docker/docker/builder/dev/eth0 && pwd && ls -la /home/runner/work/docker/docker/builder/dev/eth0
 
       - name: dockerize
         run: |
-          pwd && cd builder && docker build . -t mbedtls:v1
+          pwd && cd builder && ls -la dev && docker build . -t mbedtls:v1
           perl scripts/plif.pl && ip address show
           docker image ls mbedtls:v1
           docker run --rm -t mbedtls:v1
